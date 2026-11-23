@@ -181,6 +181,10 @@ em.s{font:italic 420 1.06em/1 'Source Serif 4',serif;color:var(--tt);letter-spac
 .cr img{width:62px;height:auto;flex:none}
 .cr b{font:italic 440 24px/1 'Source Serif 4',serif;color:var(--tt);min-width:62px}
 .qt{margin-top:14px;font-size:16px;color:var(--ink);font-style:normal;border-left:2px solid var(--teal);padding-left:14px}
+/* author: portrait */
+#author{padding-top:28px}.ah{max-width:480px;margin:0 auto}.ah-ph{position:relative;aspect-ratio:1000/1528}.ah-ph img{display:block;width:100%;height:100%;object-fit:cover;-webkit-mask-image:linear-gradient(#000 79%,transparent 98%);mask-image:linear-gradient(#000 79%,transparent 98%)}.ah-ph .k{position:absolute;left:0;right:0;top:22px;margin:0;text-align:center;font-size:11px;letter-spacing:.17em;color:#1C1915;opacity:.72}
+.ah-tx{position:relative;text-align:center;margin-top:-14px;padding:0 24px}.ah h2{font-weight:400;font-size:44px;line-height:1.03;letter-spacing:-.025em;margin:0;color:var(--ink)}.ah-tx p{font-size:15px;color:var(--ink2);margin-top:12px}
+.ah-b{padding:30px 30px 0}.ah-n{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;border-top:1px solid var(--line);padding-top:26px}.ah-n b{display:block;font:italic 380 25px/1.1 'Source Serif 4',serif;color:var(--tt);white-space:nowrap}.ah-n span{display:block;font-size:12px;color:var(--ink2);margin-top:6px}.ah-ed{margin-top:28px;text-align:center}.ah-ed img{display:block;margin:0 auto;width:88px;height:auto;filter:grayscale(1) contrast(1.15);opacity:.74}.ah-ed p{font-size:12.5px;line-height:1.5;color:var(--ink2);margin-top:10px}
 /* faq */
 details{border-top:1px solid var(--line)}
 details:last-of-type{border-bottom:1px solid var(--line)}
@@ -440,24 +444,15 @@ strong{font-weight:inherit;color:var(--ink);background:linear-gradient(transpare
 </section>
 
 <section id="author">
-  <div class="w">
-    <div class="k">Автор программы</div>
-    <h2>Кто <em class="s">ведёт</em> программу</h2>
-    <div class="au card">
-      <button type="button" class="vbx" data-snd aria-label="Включить звук: обращение автора" aria-pressed="false"><video data-auto src="img/author_v.mp4" poster="img/author_v.webp" muted loop playsinline preload="none"></video><span class="sn"><svg class="off" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 9l4 6M21 9l-4 6"/></svg><svg class="on" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 010 7M19 6a8.5 8.5 0 010 12"/></svg></span></button>
-      <div class="in">
-        <h3>Шынгыс Садык</h3>
-        <ul class="cr">
-          <li><img src="img/nu_logo.svg" alt="Назарбаев Университет" width="62" height="14"><span>Дипломированный химик, Назарбаев Университет</span></li>
-          <li><img src="img/the_logo.svg" alt="THE" width="62" height="25"><span>Университет&nbsp;- №&nbsp;1 в&nbsp;Центральной Азии и&nbsp;СНГ, рейтинг университетов THE 2027</span></li>
-          <li><b>3</b><span>года частной практики</span></li>
-          <li><b>1&nbsp;000+</b><span>проведённых консультаций</span></li>
-        </ul>
-        <p class="qt">«На&nbsp;консультациях я&nbsp;вижу одно и&nbsp;то&nbsp;же: люди годами пробуют советы наугад. За&nbsp;14&nbsp;дней я&nbsp;объясню вам то, что&nbsp;объясняю <strong>клиентам лично</strong>,&nbsp;- простым языком и&nbsp;с&nbsp;опорой на&nbsp;исследования.»</p>
-      </div>
+  <div class="ah">
+    <div class="ah-ph"><img src="img/author_h.webp?v=1" alt="Шынгыс Садык" loading="lazy" width="1000" height="1528"><div class="k">Автор программы</div></div>
+    <div class="ah-tx"><h2>Шынгыс<br>Садык</h2><p>Специалист в&nbsp;метаболическом здоровье</p></div>
+    <div class="ah-b">
+      <div class="ah-n"><div><b>1&nbsp;000+</b><span>консультаций</span></div><div><b>3&nbsp;года</b><span>практики</span></div><div><b>190&nbsp;тыс.</b><span>аудитория</span></div></div>
+      <div class="ah-ed"><img src="img/nu_logo.svg" alt="Назарбаев Университет" width="88" height="20"><p>Химик по&nbsp;образованию. Университет №&nbsp;1 в&nbsp;Центральной Азии и&nbsp;СНГ, рейтинг THE&nbsp;2027</p></div>
     </div>
-    <div class="cta"><a class="btn" href="#tariffs">Выбрать тариф · от&nbsp;14&nbsp;990&nbsp;₸</a></div>
   </div>
+  <div class="w"><div class="cta"><a class="btn" href="#tariffs">Выбрать тариф · от&nbsp;14&nbsp;990&nbsp;₸</a></div></div>
 </section>
 
 <section id="faq" style="padding-top:20px">
