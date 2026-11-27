@@ -1,0 +1,1049 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<!-- security -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-DeIf1ZQoaJN7XFVpriE5HrQn/U7dy1AqCda0ZF9oCkI='; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<meta name="format-detection" content="telephone=no">
+<!-- /security -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Энергетики и ваша усталость · Шынгыс Садык</title>
+<meta name="description" content="Калькулятор кофеина и сахара, самопроверка на 8 вопросов и список анализов, которые покажут, куда уходят силы.">
+<meta property="og:title" content="Энергетики и ваша усталость">
+<meta property="og:description" content="Посчитайте свой кофеин и сахар и узнайте, какую усталость прячет банка">
+<meta property="og:image" content="https://shynggyssadyk.github.io/energetiki/img/preview.jpg">
+<meta property="og:url" content="https://shynggyssadyk.github.io/energetiki/">
+<meta name="theme-color" content="#0F0D0B">
+<link rel="icon" href="img/logo.webp" type="image/webp">
+<link rel="preload" href="fonts/Geologica-cyrillic-189ca8.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* ===== Fonts: self-hosted variable faces (same files as the МГ landing) ===== */
+@font-face{font-family:'Geologica';font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/Geologica-cyrillic-189ca8.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+0492-0493,U+049A-049B,U+04A2-04A3,U+04AE-04AF,U+04B0-04B1,U+04BA-04BB,U+04D8-04D9,U+04E8-04E9,U+2116}
+@font-face{font-family:'Geologica';font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/Geologica-latin-d17690.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+20B8,U+20BD,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:200 900;font-display:swap;src:url(fonts/SourceSerif4-cyrillic-cbd890.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+0492-0493,U+049A-049B,U+04A2-04A3,U+04AE-04AF,U+04B0-04B1,U+04BA-04BB,U+04D8-04D9,U+04E8-04E9,U+2116}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:200 900;font-display:swap;src:url(fonts/SourceSerif4-latin-a6fe03.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+/* ===== Tokens + base (STYLE_SPEC §2) ===== */
+:root{color-scheme:dark;--bg:#0F0D0B;--bg2:#16130F;--card:#1B1814;--surf:#1B1814;--ink:#F3EDE3;--ink2:#CBC2B4;--mute:#9C9385;--mute2:#9C9385;--tk:#5FD6DE;--coral-t:#F29A8F;
+ --teal:#19C3D0;--tt:#5FD6DE;--tsoft:rgba(25,195,208,.16);--line:#2A2520;--ctl:#3B352D;--btn-ink:#04262A;--cta:#F2B33D;--cta-ink:#2B1D02;
+ --coral:#F06A5C;--r:22px;--serif:'Source Serif 4',Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink2);font:400 18px/1.6 Geologica,system-ui,sans-serif;overflow-x:hidden}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+.w{max-width:560px;margin:0 auto;padding:0 20px}
+section{padding:56px 0;scroll-margin-top:52px}
+.alt{background:var(--bg2);--mute:var(--ink2);--mute2:var(--ink2)}
+.band{padding:52px 0;margin-top:52px}
+.band .sub-k{margin-top:0}
+h1,h2,h3{color:var(--ink);font-weight:450;letter-spacing:-.025em;line-height:1.1;text-wrap:balance}
+h1{font-size:clamp(34px,9.6vw,52px)}
+h2{font-size:clamp(28px,7.8vw,40px);margin-bottom:14px}
+h3{font-size:22px;line-height:1.25}
+p{text-wrap:pretty}
+em.s{font:italic 420 1.06em/1 var(--serif);color:var(--tt);letter-spacing:-.01em}
+strong{font-weight:inherit;color:var(--ink);background:linear-gradient(transparent 58%,#CDEFF2 58%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.card strong{background:linear-gradient(transparent 58%,#B9E8EC 58%)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.skip{position:absolute;left:-999px;top:8px;z-index:60;background:var(--surf);color:var(--ink);padding:10px 14px;border-radius:12px}
+.skip:focus{left:12px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.mt{margin-top:22px}
+.nw{white-space:nowrap}
+.sm{font-size:14px;color:var(--mute);line-height:1.5}
+
+/* icons: monoline, 1.6 stroke */
+svg.ic{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.ti{width:44px;height:44px;border-radius:12px;background:var(--tsoft);display:grid;place-items:center;flex:none}
+.alt .ti{background:var(--surf)}
+.ti svg.ic{width:24px;height:24px;stroke:var(--ink)}
+
+/* ===== Lockup (§2.1) ===== */
+.lock{display:flex;align-items:center;gap:11px;text-decoration:none}
+.lock img{width:44px;height:44px;border-radius:50%;flex:none}
+.lock span{display:inline-grid;justify-items:start}
+.lock b{font-weight:600;font-size:16px;line-height:1.15;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);white-space:nowrap}
+.lock small{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+
+/* ===== Sticky section nav + cabinet progress (§2.13, §2.12) ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;background:var(--surf);border-bottom:1px solid var(--line);transform:translateY(-105%);transition:transform .3s}
+.nav.on{transform:none}
+.nav .in{display:flex;align-items:center;max-width:560px;margin:0 auto;height:52px}
+.nav .chips{flex:1;min-width:0;display:flex;overflow-x:auto;padding:0 18px 0 10px;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 22px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 22px),transparent)}
+.nav .chips::-webkit-scrollbar{display:none}
+.nav .chips a{flex:none;display:flex;align-items:center;height:52px;padding:0 2px;font-size:14px;color:var(--ink2);text-decoration:none}
+.nav .chips a span{padding:6px 10px;border-radius:999px;transition:background .15s,color .15s}
+.nav .chips a.on span{background:var(--tsoft);color:var(--tk)}
+.nav .lbl{flex:none;padding:0 16px 0 6px;font-size:13px;color:var(--mute);white-space:nowrap;font-variant-numeric:tabular-nums}
+.nav .rbar{position:absolute;left:0;right:0;bottom:-1px;height:2px;border-radius:0;background:var(--line)}
+.nav .rbar i{border-radius:0}
+.rbar{height:6px;border-radius:99px;background:var(--line);overflow:hidden}
+.rbar i{display:block;height:100%;width:0;background:var(--teal);border-radius:99px;transition:width .2s}
+
+/* ===== Hero (§2.2) ===== */
+.hero{padding:0 0 40px;background:var(--bg)}
+.hph{position:relative;margin:20px -20px 0;height:min(78vw,330px);overflow:hidden;background:var(--bg);
+ -webkit-mask-image:linear-gradient(180deg,#000 0,#000 58%,transparent 100%);mask-image:linear-gradient(180deg,#000 0,#000 58%,transparent 100%)}
+.hph video{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hph::before{content:"";position:absolute;inset:0;z-index:1;background:url(img/noise_s.png) 0 0/220px;opacity:.45;pointer-events:none}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border:1px solid rgba(10,135,146,.45);border-radius:999px;color:var(--tk);font-size:14px;font-weight:450;background:var(--surf)}
+.chip i{width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.hero .chip{display:flex;width:fit-content;margin:-19px 0 16px;position:relative;z-index:2}
+.hero h1{margin-bottom:14px}
+.lead{font-size:18px;line-height:1.55;color:var(--ink2)}
+
+/* ===== Buttons (§2.5) ===== */
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:999px;background:var(--cta);color:var(--cta-ink);font-weight:500;font-size:17px;text-decoration:none;border:0;cursor:pointer;box-shadow:0 14px 30px -16px rgba(180,110,10,.7);transition:transform .15s,background .15s;width:100%;max-width:420px;text-align:center}
+.btn:active{transform:scale(.97)}
+.btn svg.ic{width:18px;height:18px;stroke-width:1.7}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:none;border:1px solid var(--ctl)}
+.cta{margin-top:26px}
+.cta small,.cta-note{display:block;margin-top:10px;color:var(--mute);font-size:14px;line-height:1.5}
+.lnk{display:flex;align-items:center;gap:8px;min-height:48px;font-size:17px;color:var(--tk);text-decoration:none;font-weight:450;background:none;border:0;cursor:pointer}
+
+/* ===== Kicker (§2.3) ===== */
+.k{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--tk);font-weight:450;margin-bottom:12px;line-height:1.4}
+
+/* ===== Facts (§2.8) ===== */
+.facts{display:flex;margin-top:22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts>div{flex:1;min-width:0;padding:12px 0;font-size:13px;color:var(--ink2);line-height:1.3}
+.facts>div+div{padding-left:12px;border-left:1px solid var(--line)}
+.facts b{display:block;font:italic 440 26px/1.1 var(--serif);color:var(--tt);font-variant-numeric:tabular-nums lining-nums;margin-bottom:2px}
+.facts em{display:block;font-style:normal;font-size:13px;color:var(--mute2);margin-top:6px}
+.facts.big b{font-size:40px;letter-spacing:-.01em}
+.facts.big b small{font-size:22px}
+.facts.big>div{font-size:15px;padding:14px 0}
+.facts.big>div+div{padding-left:14px}
+
+/* ===== List rows (§2.6) ===== */
+.pl{list-style:none;margin-top:22px}
+.pl li{display:flex;gap:14px;align-items:center;padding:12px 0;min-height:56px;border-top:1px solid var(--line);font-size:17px;line-height:1.45;color:var(--ink)}
+.pl li:last-child{border-bottom:1px solid var(--line)}
+.pl .tx{display:block}
+.pl .tx b{display:block;font-weight:450}
+.pl .sub{display:block;font-size:14px;color:var(--mute2);line-height:1.4;margin-top:2px}
+.st{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--ctl);display:grid;place-items:center;flex:none;background:var(--surf)}
+.st svg.ic{width:16px;height:16px;stroke:#fff;stroke-width:2;opacity:0}
+.st.on,.ok .st{background:var(--tt);border-color:var(--tt)}
+.st.on svg.ic,.ok .st svg.ic{opacity:1}
+
+/* ===== Steps + timeline (§2.7) ===== */
+.steps{list-style:none;margin-top:22px}
+.steps li{display:flex;gap:14px;padding:12px 0;border-top:1px solid var(--line);font-size:17px;line-height:1.45;color:var(--ink2)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps>li>i{font:italic 420 26px/1 var(--serif);color:var(--tt);min-width:20px;font-variant-numeric:lining-nums}
+.steps b{display:block;font-weight:450;color:var(--ink)}
+.steps span{display:block}
+.tl{list-style:none;margin-top:22px}
+.tl>li{position:relative;padding:0 0 26px 30px}
+.tl>li::before{content:"";position:absolute;left:6px;top:8px;bottom:-8px;width:1.5px;background:var(--line)}
+.tl>li:last-child{padding-bottom:0}
+.tl>li:last-child::before{display:none}
+.tl>li::after{content:"";position:absolute;left:0;top:5px;width:14px;height:14px;border-radius:50%;border:1.5px solid var(--teal);background:var(--bg)}
+.alt .tl>li::after{background:var(--bg2)}
+.tl>li.f::after{background:var(--teal)}
+.tl .d{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--tk);font-weight:450;line-height:1.3}
+.tl b{display:block;font-weight:450;color:var(--ink);font-size:18px;margin-top:4px}
+.tl p{font-size:17px;line-height:1.5;margin-top:4px}
+.shot{margin-top:14px}
+.shot img{border-radius:14px;border:1px solid var(--line);background:var(--surf)}
+.shot .fade{max-width:240px;max-height:320px;overflow:hidden;border-radius:14px 14px 0 0;border:1px solid var(--line);border-bottom:0;-webkit-mask-image:linear-gradient(#000 68%,transparent);mask-image:linear-gradient(#000 68%,transparent)}
+.shot .fade img{width:100%;border:0;border-radius:0}
+.shot figcaption{font-size:14px;color:var(--mute);line-height:1.45;margin-top:8px}
+
+/* ===== Quote / stop (§2.9) ===== */
+.qt{margin-top:22px;font-size:18px;line-height:1.55;color:var(--ink);border-left:2px solid var(--teal);padding-left:14px}
+.stop{margin-top:18px;border-left:2px solid var(--coral);padding:2px 0 2px 14px}
+.stop summary{color:var(--ink);font-weight:450;min-height:48px;padding:6px 0}
+.stop summary>span{flex:1}
+.stop summary small{display:block;font-size:14px;color:var(--mute2);font-weight:400;margin-top:2px}
+.stop ul{list-style:none;margin:2px 0 10px}
+.stop li{padding:8px 0;border-top:1px solid var(--line);font-size:17px;color:var(--ink);display:flex;gap:10px;align-items:baseline}
+.stop li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--coral);transform:translateY(-2px)}
+.stop p{font-size:17px;line-height:1.55;padding-bottom:10px}
+.stop p a{color:var(--tk);display:inline;padding:6px 0;margin:-6px 0}
+
+/* ===== Accordion (§2.14) ===== */
+details{border-top:1px solid var(--line)}
+details:last-of-type{border-bottom:1px solid var(--line)}
+details.stop{border-top:0;border-bottom:0}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:14px;align-items:center;min-height:56px;padding:12px 0;font-size:18px;font-weight:400;color:var(--ink);line-height:1.35}
+summary::-webkit-details-marker{display:none}
+summary::after,.pm{content:"+";flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--ctl);display:grid;place-items:center;color:var(--tt);font-size:18px;line-height:1;transition:background .15s}
+details[open]>summary::after{content:"−";background:var(--teal);border-color:var(--teal);color:var(--btn-ink)}
+details p{color:var(--ink2);font-size:17px}
+
+/* ===== Chips / tags (§2.10) ===== */
+.bn{display:inline-block;font-size:14px;color:var(--ink2);border:1px solid rgba(10,135,146,.4);border-radius:999px;padding:3px 10px;white-space:nowrap;line-height:1.4}
+.cp{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--ctl);background:var(--surf);font-size:14px;color:var(--ink);cursor:pointer;transition:background .15s,border-color .15s,color .15s;flex:none}
+.cp svg.ic{width:16px;height:16px}
+.cp.on{background:var(--tsoft);border-color:var(--teal);color:var(--tk)}
+
+/* ===== Cards (§2.11): quiz, case, plan frame ===== */
+.card{background:var(--surf);border-radius:var(--r);box-shadow:0 1px 0 rgba(0,0,0,.04),0 18px 40px -30px rgba(0,0,0,.35)}
+
+/* ===== Quiz (§2.15) ===== */
+.quiz{padding:18px 18px 22px;margin-top:22px}
+.qtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:14px;color:var(--mute2);font-variant-numeric:tabular-nums}
+.qback{display:inline-flex;align-items:center;gap:2px;background:none;border:0;color:var(--tk);min-height:44px;cursor:pointer;font-size:15px}
+.qback svg.ic{width:18px;height:18px}
+.qback:disabled{opacity:.35;cursor:default}
+.qimg{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;margin-top:14px;background:var(--bg)}
+.quiz .qk{margin:18px 0 6px}
+#qrun{display:flex;flex-direction:column}
+#qslide{flex:1;display:flex;flex-direction:column}
+#qslide>h3{min-height:2.5em}
+#qslide>.qd{min-height:3em}
+.qd{font-size:17px;line-height:1.5;color:var(--ink2);margin-top:6px}
+.qans{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.qans button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;border-radius:999px;font-weight:500;font-size:17px;cursor:pointer;transition:transform .15s}
+.qans button svg.ic{width:18px;height:18px;stroke-width:1.7}
+.qans .no{background:var(--surf);color:var(--ink);border:1px solid var(--ctl)}
+.qans .yes{background:var(--teal);color:var(--btn-ink);border:0}
+.qans button:active{transform:scale(.97)}
+.fact{flex:1;display:flex;flex-direction:column;align-items:flex-start;padding:18px 0 0}
+.fact .ti{margin-bottom:4px}
+.fact p{font-size:17px;line-height:1.55;color:var(--ink)}
+.fact .btn{margin-top:auto;max-width:none}
+.fact p{margin-bottom:20px}
+.anl{padding:20px 0 6px}
+.anl ul{list-style:none}
+.anl li{display:flex;gap:12px;align-items:center;padding:12px 0;border-top:1px solid var(--line);font-size:17px;color:var(--ink)}
+.anl li:last-child{border-bottom:1px solid var(--line)}
+.result{display:none;padding-top:6px}
+.result.on{display:block}
+.score{display:flex;align-items:baseline;gap:8px}
+.score b{font:italic 440 64px/1 var(--serif);color:var(--tt);font-variant-numeric:tabular-nums lining-nums}
+.score span{font-size:14px;color:var(--mute2)}
+.result .rbar{margin:14px 0 18px}
+.result h3{margin-bottom:8px}
+.result>p{font-size:17px;line-height:1.55}
+.result .pl{margin-top:16px}
+.result .pl li{font-size:17px;min-height:52px;padding:10px 0}
+.rec{margin-top:24px}
+.rec .k{margin-bottom:0}
+.rec .steps{margin-top:10px}
+.rec .steps li{font-size:17px;color:var(--ink);align-items:baseline}
+.rec .btn{margin-top:14px}
+.result>.btn{margin-top:22px}
+.result .lnk{margin:6px auto 0}
+
+/* ===== Map scheme (§3.3) ===== */
+.gi{position:relative;max-width:min(300px,48vh);margin:22px auto 26px}
+.gi svg{display:block;width:100%;height:auto}
+.gi .org{fill:var(--tsoft);stroke:var(--tt);stroke-width:1.5;transition:fill .15s}
+.gi .org.sel{fill:var(--teal);fill:color-mix(in srgb,var(--teal) 35%,var(--tsoft))}
+.gi .tube-o{fill:none;stroke:var(--tt);stroke-linecap:round;stroke-linejoin:round}
+.gi .tube-i{fill:none;stroke:var(--tsoft);stroke-linecap:round;stroke-linejoin:round;transition:stroke .15s}
+.gi .sel .tube-i{stroke:var(--teal);stroke:color-mix(in srgb,var(--teal) 35%,var(--tsoft))}
+.gpin{position:absolute;width:44px;height:44px;margin:-22px 0 0 -22px;border:0;background:none;display:grid;place-items:center;cursor:pointer;padding:0}
+.gpin span{width:28px;height:28px;border-radius:50%;background:var(--surf);border:1.5px solid var(--tt);display:grid;place-items:center;font:italic 420 17px/1 var(--serif);color:var(--tt);box-shadow:0 10px 24px -20px rgba(0,0,0,.5);transition:background .15s,color .15s}
+.gpin.on span{background:var(--teal);border-color:var(--teal);color:#04262A}
+.olist{list-style:none;margin-top:18px}
+.olist button{display:flex;gap:14px;align-items:center;width:100%;min-height:60px;padding:12px 0;border:0;border-top:1px solid var(--line);background:none;text-align:left;cursor:pointer;color:var(--ink)}
+.olist li:last-child button{border-bottom:1px solid var(--line)}
+.olist i{font:italic 420 26px/1 var(--serif);color:var(--tt);min-width:20px}
+.olist .tx{flex:1}
+.olist b{display:block;font-weight:450;font-size:17px;line-height:1.35}
+.olist small{display:block;font-size:14px;color:var(--mute2);line-height:1.4}
+.olist svg.ic{width:18px;height:18px;color:var(--tt)}
+#tests{margin-top:30px;scroll-margin-top:70px}
+#tests>summary b{display:block;font-weight:450}
+#tests>summary small{display:block;font-size:14px;color:var(--mute2);margin-top:2px}
+.groupt{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--tk);margin:14px 0 4px}
+.acc{border-top:1px solid var(--line)}
+.stack .acc:last-child{border-bottom:1px solid var(--line)}
+.acc-h{display:flex;gap:14px;align-items:center;width:100%;min-height:68px;padding:12px 0;border:0;background:none;text-align:left;cursor:pointer;color:var(--ink)}
+.acc-h .tx{flex:1;min-width:0}
+.acc-h b{display:block;font-weight:450;font-size:17px;line-height:1.35}
+.acc-h small{display:block;font-size:14px;color:var(--mute2);line-height:1.4;margin-top:2px}
+.acc.open .pm{background:var(--teal);border-color:var(--teal);color:var(--btn-ink)}
+.acc-b{display:none;padding:0 0 16px 58px}
+.acc.open .acc-b{display:block}
+.acc-b p{font-size:17px;line-height:1.55;margin-bottom:12px}
+.acc-b b{font-weight:450;color:var(--ink)}
+.note{font-size:15px;line-height:1.55;padding:16px 0}
+
+/* ===== Do / don't (.fr) + Bristol ===== */
+.fr{margin-top:22px;border-top:2px solid var(--tt)}
+.fr.n{border-top-color:var(--coral)}
+.fr>small{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--tk);padding:12px 0 2px}
+.fr .steps{margin-top:0}
+.fr .steps li:first-child{border-top:0}
+.fr .steps li>div{flex:1;min-width:0}
+.fr.n>small{color:var(--coral-t)}
+.fr ul{list-style:none}
+.fr li{padding:12px 0;border-bottom:1px solid var(--line);font-size:17px;line-height:1.5}
+.fr li b{display:block;font-weight:450;color:var(--ink)}
+.bristol{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin:12px 0 0 -34px}
+.bristol button{min-height:46px;border-radius:12px;border:1px solid var(--ctl);background:var(--surf);color:var(--ink);font-size:17px;font-weight:450;cursor:pointer;font-variant-numeric:tabular-nums;transition:background .15s,color .15s}
+.bristol button.on{background:var(--teal);border-color:var(--teal);color:#04262A}
+.binfo{margin-top:10px;font-size:15px;line-height:1.5;color:var(--ink2)}
+.binfo i{display:inline-block;min-width:0;width:8px;height:8px;border-radius:50%;margin-right:8px;vertical-align:1px}
+.binfo i.ok{background:var(--tt)}.binfo i.bad{background:var(--coral)}
+
+/* ===== Case (§2.19, showcase card) ===== */
+.case{padding:20px}
+.case .lbl{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--tk)}
+.case h3{margin:6px 0 10px}
+.case .fr{margin:0;padding:12px 0;border-top:1px solid var(--line)}
+.case .fr small{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute2);margin-bottom:4px;padding:0}
+.case .fr p{font-size:17px;line-height:1.5;font-weight:400;color:var(--ink2)}
+.case .fr.y{border-top-color:var(--tt)}.case .fr.y small{color:var(--tk)}
+.case .note2{font-size:14px;color:var(--mute2);margin-top:8px;line-height:1.45}
+.h3b{font-size:26px;line-height:1.2}
+.sub-k{margin-top:40px}
+
+/* ===== Plan frame (§2.16 B, the one dark frame) ===== */
+.pc{position:relative;margin-top:30px;border-radius:var(--r);overflow:hidden;background:#0A1628;color:#fff;padding:26px 22px 24px;isolation:isolate}
+.pc::before{content:"";position:absolute;inset:0;z-index:-2;background:#0A1628 50% 30%/cover;filter:brightness(.55) saturate(.5)}
+.pc.bg::before{background-image:url(img/cover_tubes.jpg)}
+.pc::after{content:"";position:absolute;inset:0;z-index:-1;background:url(img/noise_s.png) 0 0/220px,linear-gradient(180deg,rgba(13,60,72,.45),#0A1628 80%)}
+.pc .pk{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#9FE6EB}
+.pc h3{color:#fff;font-size:28px;line-height:1.15;margin:8px 0 12px}
+.pc h3 em.s{color:#7FE9F1}
+.pc p{font-size:17px;line-height:1.55;color:rgba(255,255,255,.84)}
+.pc .rbar{background:rgba(255,255,255,.18);margin-top:20px}
+.pc .rbar i{width:100%}
+.pc .ticks{position:relative;height:20px;font-size:13px;color:rgba(255,255,255,.8);margin-top:6px;font-variant-numeric:tabular-nums}
+.pc .ticks span{position:absolute;top:0;transform:translateX(-50%)}
+.pc .ticks span:first-child{left:0;transform:none}
+.pc .ticks span:last-child{left:auto;right:0;transform:none}
+.pc+.cta{margin-top:22px}
+.pc ul{list-style:none;margin-top:16px}
+.pc li{display:flex;gap:12px;align-items:center;padding:11px 0;border-top:1px solid rgba(255,255,255,.14);font-size:17px;line-height:1.45;color:rgba(255,255,255,.84)}
+.pc li b{font-weight:500;color:#fff}
+.pc li .st{background:transparent;border-color:#7FE9F1;width:24px;height:24px}
+.pc li .st svg.ic{opacity:1;stroke:#7FE9F1;width:14px;height:14px}
+.pc .pq{margin-top:16px;border-left:2px solid #7FE9F1;padding-left:12px;color:#fff}
+
+/* ===== Seats + booking (§2.17, §2.18) ===== */
+.seats{margin-top:44px}
+.seats .facts b{font-size:34px}
+.seats p.sm{margin-top:10px;font-size:15px;color:var(--ink2)}
+.book{margin-top:22px;border-top:1px solid var(--line);padding-top:16px}
+.bk-h{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;font-size:17px;color:var(--ink)}
+.bk-h b{display:block;font-weight:450}
+.bk-h small{display:block;font-size:14px;color:var(--mute2)}
+.bk-days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:12px}
+.bk-d{text-align:center;padding:8px 0;border-radius:12px;border:1px solid var(--line);font-size:13px;color:var(--mute2);background:transparent;line-height:1.3}
+.bk-d b{display:block;font-size:17px;font-weight:450;color:var(--ink);font-variant-numeric:tabular-nums}
+.bk-d.we{background:transparent;color:#7A8BA0}
+.bk-d.we b{color:#7A8BA0}
+.bk-seats{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:14px;color:var(--ink2)}
+.bk-s i{display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--teal);margin-right:6px;vertical-align:-1px}
+.bk-s.busy i{background:var(--teal)}
+.bk-note{margin-top:10px;font-size:14px;color:var(--mute2);line-height:1.5}
+
+/* ===== Author appeal ===== */
+.appeal{margin-top:48px;padding-top:28px;border-top:1px solid var(--line)}
+.appeal .lock{margin-bottom:18px}
+.appeal p{font-size:18px;line-height:1.6}
+.appeal p+p{margin-top:12px}
+.appeal .k.sub-k{margin-top:30px;margin-bottom:0}
+.appeal .pl{margin-top:8px}
+.appeal .pl li{font-size:17px}
+.gets{margin-top:6px;font-size:18px;line-height:1.6}
+.appeal .after{margin-top:22px}
+
+/* ===== Sources + footer (§2.20) ===== */
+#sources{padding:28px 0 calc(92px + env(safe-area-inset-bottom))}
+#why .facts{border-top:0;margin-top:6px}
+#sources summary{font-size:15px;min-height:48px}
+.src{padding:0 0 16px 20px;font-size:14px;color:var(--ink2);line-height:1.5}
+.src li+li{margin-top:6px}
+footer{padding:26px 0 30px;font-size:13px;line-height:1.5;color:var(--ink2)}
+
+/* ===== Bottom bar (§2.13 MG .bar) ===== */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surf);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .3s}
+.bar.on{transform:none}
+.bar .in{display:flex;align-items:center;gap:12px;max-width:560px;margin:0 auto}
+.bar .bi{flex:1;min-width:0;line-height:1.3;font-size:13px;color:var(--ink2)}
+.bar .bi b{display:block;font-size:15px;color:var(--ink);font-weight:500;white-space:nowrap}
+.bar .btn{width:auto;min-height:50px;padding:0 18px;font-size:17px;flex:none}
+.bar .bi>span{display:block;white-space:nowrap}
+.fab{position:relative;flex:none;width:50px;height:50px;border-radius:50%;border:1px solid var(--ctl);background:var(--surf);display:grid;place-items:center;color:var(--ink);cursor:pointer}
+.fab svg.ic{width:20px;height:20px}
+.fab b{position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--teal);color:var(--btn-ink);font-size:13px;font-weight:500;line-height:18px;text-align:center;font-variant-numeric:tabular-nums}
+.fab:not(.on) b{display:none}
+
+/* ===== Sheet + toast ===== */
+.scrim{position:fixed;inset:0;z-index:30;background:rgba(0,0,0,.4);opacity:0;pointer-events:none;transition:opacity .25s}
+.scrim.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:31;max-width:560px;margin:0 auto;max-height:86vh;overflow:auto;overscroll-behavior:contain;background:var(--surf);border-radius:22px 22px 0 0;padding:8px 20px calc(24px + env(safe-area-inset-bottom));transform:translateY(105%);visibility:hidden;transition:transform .25s ease-out,visibility 0s .25s}
+.sheet.on{transform:none;visibility:visible;transition:transform .25s ease-out}
+.grab{width:40px;height:4px;border-radius:99px;background:var(--line);margin:0 auto 10px}
+.sh-h{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
+.sh-h h3{font-size:22px}
+.x-btn{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--ctl);background:var(--surf);display:grid;place-items:center;color:var(--ink);cursor:pointer}
+.x-btn svg.ic{width:18px;height:18px}
+.sym{display:flex;gap:10px;align-items:baseline;padding:14px 0 4px;font-size:17px;color:var(--ink2)}
+.sym i{flex:none;width:7px;height:7px;border-radius:50%;background:var(--coral);transform:translateY(-2px)}
+.trow{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 0 14px;border-bottom:1px solid var(--line)}
+.trow b{font-weight:500;color:var(--ink);font-size:17px;line-height:1.35}
+#shBody>.btn{margin:22px auto 0}
+#shBody>.btn.ghost{margin-top:10px}
+.mlist{list-style:none;counter-reset:m;margin-top:6px}
+.mlist li{counter-increment:m;display:flex;align-items:center;gap:12px;padding:8px 0;border-top:1px solid var(--line);font-size:17px;color:var(--ink);line-height:1.4}
+.mlist li:last-child{border-bottom:1px solid var(--line)}
+.mlist li::before{content:counter(m);font:italic 420 22px/1 var(--serif);color:var(--tt);min-width:18px}
+.mlist li span{flex:1}
+.mlist button{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:none;display:grid;place-items:center;color:var(--mute2);cursor:pointer}
+.mlist button svg.ic{width:18px;height:18px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.row2 .btn{width:100%;padding:0 12px;font-size:17px}
+.empty{padding:18px 0 8px;color:var(--ink2);font-size:17px}
+.sheet .sm{margin-top:18px}
+.sheet .sm+.btn{margin-top:10px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));z-index:40;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:14px;padding:10px 16px;border-radius:12px;opacity:0;pointer-events:none;transition:opacity .25s;white-space:nowrap}
+.toast.on{opacity:1}
+.toast.bar-on{bottom:calc(84px + env(safe-area-inset-bottom))}
+.toast.top{bottom:auto;top:calc(64px + env(safe-area-inset-top))}
+
+@media (max-height:700px){.qimg{aspect-ratio:2/1}}
+@media (max-width:420px){.nav .chips{padding:0 14px 0 6px;-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 14px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 14px),transparent)}.nav .chips a{font-size:14px;padding:0}.nav .chips a span{padding:6px 7px}.nav .lbl{padding:0 12px 0 2px}}
+@media (max-width:380px){.bar{padding-left:12px;padding-right:12px}.bar .in{gap:10px}.fab{width:46px;height:46px}.bar .btn{padding:0 15px;font-size:15px}.bar .bi{font-size:13px}.bar .bi b{font-size:14px}}
+@media (min-width:600px){.hph{margin:20px 0 0;border-radius:14px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media (max-width:380px){.nav .chips a{padding:0 6px!important;font-size:13.5px}.nav .lbl{font-size:12.5px}}
+img,video{-webkit-touch-callout:none;-webkit-user-drag:none;user-select:none}
+
+/* ===== energetiki: caffeine calculator, weaning plan, body map, summary ===== */
+.calc{margin-top:18px;background:var(--surf);border:1px solid var(--line);border-radius:22px;padding:16px 16px 12px}
+.calc .mt1{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.calc .mt1 b{font-family:var(--serif);font-style:italic;font-weight:400;font-size:46px;line-height:1;color:var(--ink);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.calc .mt1 span{font-size:15px;color:var(--mute)}
+.cbar{height:8px;border-radius:9px;background:var(--bg2);margin:12px 0 6px;position:relative;overflow:hidden}
+.cbar i{position:absolute;inset:0 auto 0 0;width:0;background:var(--teal);border-radius:9px;transition:width .25s}
+.cbar.over i{background:var(--coral)}
+.cbar::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--surf)}
+.cbl{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
+.cstat{margin-top:8px;font-size:15px;line-height:1.45;color:var(--ink2);min-height:2.9em}
+.cstat strong{color:var(--ink);font-weight:450}
+.drinks{list-style:none;margin-top:10px;border-top:1px solid var(--line)}
+.drinks li{display:flex;align-items:center;gap:10px;min-height:54px;border-bottom:1px solid var(--line)}
+.drinks li:last-child{border-bottom:0}
+.drinks .tx{flex:1;min-width:0}
+.drinks .tx b{display:block;font-weight:450;font-size:16px;color:var(--ink)}
+.drinks .tx small{display:block;font-size:13px;color:var(--mute)}
+.stp{display:flex;align-items:center;gap:4px}
+.stp button{width:44px;height:44px;border-radius:50%;border:1px solid var(--ctl);background:var(--surf);color:var(--ink);font:400 22px/1 Geologica,sans-serif;display:grid;place-items:center;cursor:pointer;touch-action:manipulation}
+.stp button.pl{background:var(--teal);border-color:var(--teal);color:#04262A}
+.stp button:disabled{opacity:.4;cursor:default}
+.stp output{min-width:22px;text-align:center;font-size:17px;font-weight:450;font-variant-numeric:tabular-nums}
+.calc .cnote{font-size:13px;color:var(--mute);margin-top:8px;line-height:1.4}
+.hero .cta{margin-top:18px}
+.wean{margin-top:12px;border-top:1px solid var(--line)}
+.wean div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
+.wean div b{font-weight:450;color:var(--ink)}
+.wean div span{color:var(--ink2);text-align:right}
+.wean p{font-size:15px;color:var(--ink2);margin-top:10px;line-height:1.5}
+.kid{margin-top:22px;border-left:2px solid var(--teal);padding:2px 0 2px 14px}
+.kid b{display:block;font-weight:450;color:var(--ink);font-size:17px;margin-bottom:4px}
+.kid p{font-size:15px;line-height:1.5;color:var(--ink2)}
+.mysum{margin-top:22px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0}
+.mysum .k{margin-bottom:8px}
+.mysum ul{list-style:none}
+.mysum li{display:flex;justify-content:space-between;gap:12px;font-size:15px;padding:4px 0;color:var(--ink2)}
+.mysum li b{font-weight:450;color:var(--ink);font-variant-numeric:tabular-nums}
+.mysum p{font-size:13px;color:var(--mute);margin-top:6px}
+.shr{margin-top:14px;font-size:15px;padding:0 14px}
+.hero .chip{margin:18px 0 0}
+.steps span.nw{display:inline}
+
+/* ===== DARK: surfaces that were white ===== */
+html,body{background:var(--bg)}
+.nav{background:rgba(15,13,11,.97)}
+.bar{background:#14110E}
+.sheet{background:#1B1814}
+.toast{background:#F3EDE3;color:#14110E}
+.scrim{background:rgba(0,0,0,.6)}
+.card{background:#1B1814;border:1px solid var(--line);box-shadow:none}
+.calc{background:#1B1814}
+.cbar::after{background:#0F0D0B}
+.qans .yes{color:#04262A}
+.btn.ghost{color:var(--ink);border-color:var(--ctl)}
+.st.on{background:var(--teal);border-color:var(--teal)}
+.st.on svg.ic{stroke:#04262A}
+.pc{background:#14110E;border:1px solid var(--line)}
+.pc::before{background-color:#14110E}
+.pc::after{background:url(img/noise_s.png) 0 0/220px,linear-gradient(180deg,rgba(25,195,208,.10),#14110E 80%)}
+.shot img{background:#fff}
+.gpin.on span{color:#04262A}
+#gi .org{fill:rgba(25,195,208,.14);stroke:#5FD6DE}
+#gi .sel .org,#gi .org.sel{fill:rgba(25,195,208,.38)}
+mark,.qt{color:var(--ink)}
+strong,.card strong{background:linear-gradient(transparent 62%,rgba(25,195,208,.32) 62%)}
+
+/* ===== CAN HERO: sticky stage, vapor, hook, wavy arrow ===== */
+.cs{position:relative;height:150svh}
+.stage{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:16px 20px 0;
+  background:radial-gradient(60% 45% at 50% 42%,rgba(25,195,208,.10),rgba(25,195,208,0) 70%),var(--bg)}
+.stage .lock{align-self:flex-start;position:relative;z-index:3}
+.canwrap{position:relative;width:min(46vw,190px);margin-top:max(3svh,10px);will-change:transform;transform-origin:50% 30%}
+.cani{position:relative}.down span{display:flex;flex-direction:column;align-items:center;gap:4px}
+.can{display:block;width:100%;height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6))}
+.vapor{position:absolute;left:50%;bottom:86%;width:150%;transform:translateX(-50%);height:auto;overflow:visible;pointer-events:none}
+.vapor path{fill:none;stroke:url(#vg);stroke-width:16;stroke-linecap:round;opacity:0;transform-box:fill-box;transform-origin:50% 100%;animation:rise 5.2s ease-out infinite}
+.vapor path:nth-child(2){animation-delay:1.6s;stroke-width:12}
+.vapor path:nth-child(3){animation-delay:3.2s;stroke-width:10}
+@keyframes rise{0%{opacity:0;transform:translateY(18px) scale(.85,.7)}25%{opacity:.9}70%{opacity:.45}100%{opacity:0;transform:translateY(-46px) scale(1.15,1.25)}}
+.hook{position:relative;z-index:2;text-align:center;margin-top:clamp(14px,3svh,30px);max-width:380px}
+.hook h1{font-size:clamp(30px,8.6vw,40px);line-height:1.08;letter-spacing:-.025em;font-weight:450;color:var(--ink)}
+.hook h1 em.s{color:var(--tt)}
+.hook p{margin-top:12px;font-size:17px;line-height:1.5;color:var(--ink2)}
+.down{position:absolute;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--mute);font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.down svg{width:44px;height:30px;overflow:visible}
+.down path{fill:none;stroke:var(--tt);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;animation:wv 1.8s ease-in-out infinite}
+.down path+path{animation-delay:.18s;opacity:.55}
+@keyframes wv{0%,100%{transform:translateY(0);opacity:.35}50%{transform:translateY(7px);opacity:1}}
+/* entrance on load */
+.in1,.in2,.in3,.in4{opacity:0;animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) forwards}
+.in1{animation-delay:.1s}.in2{animation-delay:1.1s}.in3{animation-delay:1.5s}.in4{animation-delay:2s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.calcsec{position:relative;z-index:2;margin-top:-42svh;padding-top:8px}
+.calcsec h2{margin-top:14px}
+/* ===== animated statuses ===== */
+.spoons{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;min-height:12px}
+.spoons i{width:12px;height:12px;border-radius:50%;background:var(--ctl);transition:background .25s}
+.spoons i.on{background:#F2B33D}
+.spoons i.x{background:var(--coral)}
+.decay{margin-top:20px}
+.decay .dl{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);margin-bottom:6px}
+.decay .dt{height:10px;border-radius:9px;background:var(--line);overflow:hidden}
+.decay .dt i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--teal),#F2B33D);border-radius:9px;transform-origin:0 50%;transition:transform 2.6s cubic-bezier(.3,.6,.2,1)}
+.decay.go .dt i{transform:scaleX(.5)}
+.decay .dv{font-size:15px;color:var(--ink2);margin-top:8px}
+.decay .dv b{color:var(--ink);font-weight:450;font-variant-numeric:tabular-nums}
+.wean.go div{animation:fadeUp .5s both}
+.wean.go div:nth-child(2){animation-delay:.25s}.wean.go div:nth-child(3){animation-delay:.5s}.wean.go div:nth-child(4){animation-delay:.75s}.wean.go div:nth-child(5){animation-delay:1s}.wean.go div:nth-child(6){animation-delay:1.25s}.wean.go div:nth-child(7){animation-delay:1.5s}
+@media (prefers-reduced-motion:reduce){.vapor path,.down path{animation:none;opacity:.5}.in1,.in2,.in3,.in4{opacity:1;animation:none}.decay .dt i{transition:none}.wean.go div{animation:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+
+<!-- Monoline icon sprite: stroke inherits from the <svg class="ic">, one teal accent at .35 -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7M16 6l-4-4-4 4M12 2v14"/></symbol>
+  <symbol id="i-plate" viewBox="0 0 24 24"><circle cx="13" cy="13" r="3.5" fill="#19C3D0" fill-opacity=".35" stroke="none"/><circle cx="13" cy="13" r="7"/><circle cx="13" cy="13" r="3.5"/><path d="M3 4v4.5a1.5 1.5 0 0 0 3 0V4M4.5 9.5V20"/></symbol>
+  <symbol id="i-gut" viewBox="0 0 24 24"><path d="M6 6h10a3 3 0 0 1 0 6H8a3 3 0 0 0 0 6h11" fill="none" stroke="#19C3D0" stroke-opacity=".35" stroke-width="4"/><path d="M4 3v3h12a3 3 0 0 1 0 6H8a3 3 0 0 0 0 6h11v3"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 24 24"><rect x="4" y="9" width="3.5" height="6" rx=".5" fill="#19C3D0" fill-opacity=".35" stroke="none"/><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 11v2"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M6.5 14.5h11a5.5 5.5 0 0 1-11 0z" fill="#19C3D0" fill-opacity=".35" stroke="none"/><path d="M12 3s-6 7-6 11a6 6 0 0 0 12 0c0-4-6-11-6-11z"/></symbol>
+  <symbol id="i-pill" viewBox="0 0 24 24"><path d="M10.5 20.5a5 5 0 0 1-7-7l3.5-3.5 7 7z" fill="#19C3D0" fill-opacity=".35" stroke="none"/><path d="M10.5 20.5a5 5 0 0 1-7-7l7-7a5 5 0 0 1 7 7z"/><path d="m7 10 7 7"/></symbol>
+  <symbol id="i-bug" viewBox="0 0 24 24"><path d="M5 12.5c1.6-3.2 3.4-3.2 5 0s3.4 3.2 5 0" stroke="#19C3D0" stroke-opacity=".5" stroke-width="4" fill="none"/><path d="M5 12.5c1.6-3.2 3.4-3.2 5 0s3.4 3.2 5 0M15 12.5c1.2-2.4 3-3.2 6-2.5M15 12.5c1.4-.8 3.4-.6 6 1M5 12.5C3.8 14.5 3 15 2 15"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M9 15.5a3 3 0 0 0 6 0c0-2-1.5-3-3-4.5-1 1.5-3 2.5-3 4.5z" fill="#19C3D0" fill-opacity=".35" stroke="none"/><path d="M12 3c.5 3.5 6 5.5 6 11a6 6 0 0 1-12 0c0-3 2-4.5 2.5-6.5C10 9 11 9.5 11.5 10.5 12.5 8 11.5 5.5 12 3z"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M6.6 15h10.8l1.6 3a2 2 0 0 1-1.8 3H6.8A2 2 0 0 1 5 18z" fill="#19C3D0" fill-opacity=".35" stroke="none"/><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3M7 15h10"/></symbol>
+  <symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 12h15" stroke="#19C3D0" stroke-opacity=".5" stroke-width="3"/><path d="M3 8h10a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h8"/></symbol>
+  <symbol id="i-wheat" viewBox="0 0 24 24"><path d="M12 13c-2.2-.8-3.5-2.8-3.5-5 2.2.8 3.5 2.8 3.5 5zm0 0c2.2-.8 3.5-2.8 3.5-5-2.2.8-3.5 2.8-3.5 5z" fill="#19C3D0" fill-opacity=".35" stroke="none"/><path d="M12 22V7M12 8c-2.2-.8-3.5-2.8-3.5-5 2.2.8 3.5 2.8 3.5 5zm0 0c2.2-.8 3.5-2.8 3.5-5-2.2.8-3.5 2.8-3.5 5zM12 13c-2.2-.8-3.5-2.8-3.5-5 2.2.8 3.5 2.8 3.5 5zm0 0c2.2-.8 3.5-2.8 3.5-5-2.2.8-3.5 2.8-3.5 5zM12 18c-2.2-.8-3.5-2.8-3.5-5 2.2.8 3.5 2.8 3.5 5zm0 0c2.2-.8 3.5-2.8 3.5-5-2.2.8-3.5 2.8-3.5 5z"/></symbol>
+  <symbol id="i-tube" viewBox="0 0 24 24"><path d="M10 12h4v6a2 2 0 0 1-4 0z" fill="#19C3D0" fill-opacity=".35" stroke="none"/><path d="M8.5 3h7M10 3v15a2 2 0 0 0 4 0V3M10 12h4"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="#19C3D0" fill-opacity=".35" stroke="none"/><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-can" viewBox="0 0 24 24"><rect x="7" y="9" width="10" height="9" fill="#19C3D0" fill-opacity=".35" stroke="none"/><path d="M8 4h8M7 6.5C7 5 8 4 9 4h6c1 0 2 1 2 2.5v12c0 1.5-1 2.5-2 2.5H9c-1 0-2-1-2-2.5z"/><path d="M7 9h10M7 18h10"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path d="M3 16l4-9 4 12 3-7 3 4 4-2" stroke="#19C3D0" stroke-opacity=".5" stroke-width="4" fill="none"/><path d="M3 16l4-9 4 12 3-7 3 4 4-2"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="#19C3D0" fill-opacity=".35" stroke="none"/><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+  <symbol id="i-thy" viewBox="0 0 24 24"><path d="M11 7C8 4 4 5 4.5 10c.4 4 4 6 6.5 4z" fill="#19C3D0" fill-opacity=".35" stroke="none"/><path d="M11 7C8 4 4 5 4.5 10c.4 4 4 6 6.5 4zM13 7c3-3 7-2 6.5 3-.4 4-4 6-6.5 4zM11 11h2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4" fill="#19C3D0" fill-opacity=".35" stroke="none"/><circle cx="9" cy="7" r="4"/><path d="M2 21v-1.5A4.5 4.5 0 0 1 6.5 15h5a4.5 4.5 0 0 1 4.5 4.5V21M16 3.1a4 4 0 0 1 0 7.8M22 21v-1.5a4.5 4.5 0 0 0-3.5-4.4"/></symbol>
+</svg>
+
+<nav class="nav" id="nav" aria-label="Разделы">
+  <div class="in"><div class="chips" id="chips"><a href="#quiz"><span>Тест</span></a><a href="#why"><span>Почему</span></a><a href="#map"><span>Анализы</span></a><a href="#today"><span>План</span></a><a href="#invite"><span>Чек⁠-⁠ап</span></a></div><span class="lbl" id="pTxt" aria-label="Раздел 1 из 5 · осталось ~6 мин">1 из 5 · ~6 мин</span></div>
+  <div class="rbar" aria-hidden="true"><i id="pbar"></i></div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="cs" id="cs"><div class="stage">
+    <a class="lock" href="#top" aria-label="Шынгыс Садык · Метаболическое здоровье"><img src="img/logo.webp" alt="" width="44" height="44"><span><b>Шынгыс Садык</b><small>Метаболическое здоровье</small></span></a>
+    <div class="canwrap" id="canw"><div class="cani in1"><svg class="vapor" viewBox="0 0 240 200" aria-hidden="true"><defs><linearGradient id="vg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#E6FBFC" stop-opacity=".8"/><stop offset="1" stop-color="#D9F7F9" stop-opacity="0"/></linearGradient></defs>
+        <path d="M134 196 C118 168 152 150 136 120 C122 94 150 76 138 40"/>
+        <path d="M126 196 C142 170 108 152 124 124 C138 100 112 82 122 50"/>
+        <path d="M140 196 C156 176 130 156 146 132 C158 112 140 96 150 70"/>
+      </svg><svg class="can" viewBox="0 0 160 280" aria-hidden="true">
+        <defs>
+          <linearGradient id="cm" x1="0" x2="1"><stop offset="0" stop-color="#4E4A45"/><stop offset=".18" stop-color="#B9B4AD"/><stop offset=".32" stop-color="#F1EEE9"/><stop offset=".5" stop-color="#9C978F"/><stop offset=".8" stop-color="#5E5952"/><stop offset="1" stop-color="#2E2B27"/></linearGradient>
+          <linearGradient id="cb" x1="0" x2="1"><stop offset="0" stop-color="#075A61"/><stop offset=".3" stop-color="#19C3D0"/><stop offset=".45" stop-color="#7FE9F1"/><stop offset=".7" stop-color="#0E8F9B"/><stop offset="1" stop-color="#05393E"/></linearGradient>
+          <linearGradient id="ct" x1="0" x2="1"><stop offset="0" stop-color="#6A655F"/><stop offset=".35" stop-color="#E8E4DE"/><stop offset=".65" stop-color="#A8A39C"/><stop offset="1" stop-color="#4A4641"/></linearGradient>
+        </defs>
+        <path d="M22 30 Q22 18 34 16 L126 16 Q138 18 138 30 L144 52 L144 238 L138 258 Q136 268 122 268 L38 268 Q24 268 22 258 L16 238 L16 52 Z" fill="url(#cm)"/>
+        <rect x="16" y="92" width="128" height="98" fill="url(#cb)"/>
+        <path d="M16 92h128M16 190h128" stroke="rgba(255,255,255,.35)" stroke-width="1"/>
+        <path d="M86 108 L66 146 L82 146 L72 176 L98 134 L82 134 L92 108 Z" fill="#F2B33D" opacity=".95"/>
+        <ellipse cx="80" cy="20" rx="56" ry="10" fill="url(#ct)"/>
+        <ellipse cx="80" cy="20" rx="48" ry="7" fill="none" stroke="#5E5952" stroke-width="1.2"/>
+        <ellipse cx="92" cy="20" rx="10" ry="3.6" fill="#141210"/>
+        <path d="M64 20 q8 -6 20 -3" fill="none" stroke="#D8D4CE" stroke-width="3" stroke-linecap="round"/>
+        <path d="M30 40 L30 250" stroke="rgba(255,255,255,.18)" stroke-width="5" stroke-linecap="round"/>
+      </svg></div></div>
+    <div class="hook" id="hook">
+      <h1 class="in2">Сколько сил вы <em class="s">одалживаете</em> у&nbsp;завтра?</h1>
+      <p class="in3">Посчитайте свой кофеин и узнайте, что прячет банка.</p>
+    </div>
+    <a class="down" id="down" href="#calcsec" aria-label="Листайте вниз"><span class="in4"><svg viewBox="0 0 44 30"><path d="M4 6 Q13 14 22 10 T40 6"/><path d="M8 18 Q15 24 22 21 T36 18"/></svg>Листайте</span></a>
+  </div></div>
+  <div class="w calcsec" id="calcsec">
+    <div class="chip"><i></i>Интерактивный гид · Энергетики</div>
+    <h2>Сколько кофеина в вашем <em class="s">дне</em>?</h2>
+    <div class="calc" id="calc">
+    <div class="mt1"><b id="cMg">0</b><span>мг кофеина из 400 в день</span></div>
+    <div class="cbar" id="cBar" aria-hidden="true"><i></i></div>
+    <div class="cbl"><span>0</span><span>200 за раз</span><span>400</span></div>
+    <p class="cstat" id="cStat" aria-live="polite">Нажмите «+» у всего, что пьёте за обычный день.</p>
+    <div class="spoons" id="spoons" aria-hidden="true"></div>
+    <ul class="drinks" id="drinks"></ul>
+  </div>
+    <div class="cta"><a class="btn" href="#quiz" data-ev="hero_quiz">Пройти самопроверку</a><small>Ещё 2 минуты · 8 вопросов и список анализов</small></div>
+  </div>
+</header>
+
+<main id="main">
+
+<section id="quiz"><div class="w">
+  <div class="k">Шаг 1 из 5 · самопроверка</div>
+  <h2>8 сигналов, что банка прячет <em class="s">усталость</em></h2>
+  <details class="stop" id="stop">
+    <summary><span>Есть тревожные признаки?<small>4 стоп-сигнала - проверьте сначала</small></span></summary>
+    <ul>
+      <li>Боль или давление в груди</li>
+      <li>Перебои в сердце, обмороки, темнеет в глазах</li>
+      <li>Больше 4 банок в день</li>
+      <li>Энергетики вместе с алкоголем</li>
+    </ul>
+    <p>Есть хотя бы один пункт? Не откладывайте&nbsp;- <a href="https://forms.gle/igVPeinj4NKTAGSYA" target="_blank" rel="noopener noreferrer" data-ev="stop_form">оставьте заявку</a>: помогу составить план обследования и разберу результаты.</p>
+  </details>
+  <div class="card quiz" aria-live="polite">
+    <div id="qrun">
+      <div class="qtop"><button class="qback" id="qback" type="button" disabled aria-label="Предыдущий вопрос"><svg class="ic"><use href="#i-left"/></svg>Назад</button><span id="qcount">1 из 8</span></div>
+      <div class="rbar" aria-hidden="true"><i id="qbar"></i></div>
+      <div id="qslide"></div>
+      <div class="qans" id="qans">
+        <button id="qno" class="no" type="button" aria-label="Нет">Нет</button>
+        <button id="qyes" class="yes" type="button" aria-label="Да"><svg class="ic"><use href="#i-check"/></svg>Да</button>
+      </div>
+    </div>
+    <div class="result" id="qres">
+      <div class="score" id="score" role="img"><b id="rnum">0</b><span>из 8 совпало</span></div>
+      <div class="rbar" aria-hidden="true"><i id="rbar"></i></div>
+      <h3 id="rtitle"></h3>
+      <p id="rtext"></p>
+      <div id="rmatched"></div>
+      <div id="rrec"></div>
+      <a class="btn" id="rcta" href="https://forms.gle/igVPeinj4NKTAGSYA" target="_blank" rel="noopener noreferrer" data-ev="quiz_form">Записаться на чек⁠-⁠ап</a>
+      <small class="cta-note">Анкета откроется уже с вашими ответами - останется имя и телефон.</small>
+      <button class="lnk" id="qagain" type="button">Пройти заново</button>
+    </div>
+  </div>
+</div></section>
+
+<section id="why" class="alt"><div class="w">
+  <div class="k">Шаг 2 из 5 · почему так</div>
+  <h2>Банка не даёт сил - она их <em class="s">одалживает</em></h2>
+  <ul class="pl">
+    <li><span class="ti"><svg class="ic"><use href="#i-can"/></svg></span><span class="tx"><b>Кофеин глушит сигнал усталости</b><span class="sub">он закрывает рецепторы аденозина - вещества, которое за день копится в мозге и говорит «пора отдыхать»</span></span></li>
+    <li><span class="ti"><svg class="ic"><use href="#i-wave"/></svg></span><span class="tx"><b>Рывок на пару часов - потом спад</b><span class="sub">в большой банке около 55 г сахара - это 14 чайных ложек</span></span></li>
+    <li><span class="ti"><svg class="ic"><use href="#i-moon"/></svg></span><span class="tx"><b>Сон короче - утром сил ещё меньше</b><span class="sub">и рука снова тянется к банке</span></span></li>
+  </ul>
+  <div class="facts big">
+    <div><b><span data-cnt="5">5</span><small> ч</small></b>и в крови ещё половина кофеина<em>National Academies; от 1,5 до 9,5 ч</em></div>
+    <div><b><span data-cnt="40">40</span><small>%</small></b>школьников в Казахстане регулярно пьют энергетики<em>Минздрав РК, ВОЗ 2025</em></div>
+  </div>
+  <div class="decay" id="decay">
+    <div class="dl"><span>Банка в 14:00</span><span>19:00</span></div>
+    <div class="dt"><i></i></div>
+    <p class="dv">Кофеина в крови: <b id="dPct">100%</b> - а в 23:00 ещё почти треть.</p>
+  </div>
+  <p class="qt">Банка не лечит усталость. Она её прячет - а причина остаётся.</p>
+</div></section>
+
+<section id="map"><div class="w">
+  <div class="k">Шаг 3 из 5 · что проверить</div>
+  <h2>Куда уходят силы - и какой анализ это <em class="s">покажет</em></h2>
+  <p class="lead">Нажмите на номер. Банка прячет усталость - а эти анализы показывают её причину.</p>
+  <div class="gi" id="gi">
+    <svg viewBox="0 0 240 380" role="img" aria-label="Схема: щитовидная железа, кровь, печень, поджелудочная">
+      <defs><linearGradient id="tf" gradientUnits="userSpaceOnUse" x1="0" y1="290" x2="0" y2="378"><stop offset="0" stop-color="#1F1B17"/><stop offset="1" stop-color="#1F1B17" stop-opacity="0"/></linearGradient><linearGradient id="ts" gradientUnits="userSpaceOnUse" x1="0" y1="290" x2="0" y2="378"><stop offset="0" stop-color="#4A4239"/><stop offset="1" stop-color="#4A4239" stop-opacity="0"/></linearGradient></defs>
+      <path d="M102 0C102 16 96 24 78 30C54 38 30 44 26 72C23 112 40 152 44 204C46 246 34 292 32 380H208C206 292 194 246 196 204C200 152 217 112 214 72C210 44 186 38 162 30C144 24 138 16 138 0Z" fill="url(#tf)"/>
+      <path d="M102 0C102 16 96 24 78 30C54 38 30 44 26 72C23 112 40 152 44 204C46 246 34 292 32 380M208 380C206 292 194 246 196 204C200 152 217 112 214 72C210 44 186 38 162 30C144 24 138 16 138 0" fill="none" stroke="url(#ts)" stroke-width="1.5"/>
+      <g data-o="0"><path class="org" d="M118 14C112 6 100 8 101 20C102 30 110 34 117 28Z"/><path class="org" d="M122 14C128 6 140 8 139 20C138 30 130 34 123 28Z"/><path class="org" d="M115 22H125V27H115Z"/></g>
+      <path class="org" data-o="1" d="M132 92C132 80 148 76 154 88C160 76 176 80 176 92C176 108 160 120 154 128C148 120 132 108 132 92Z"/>
+      <path class="org" data-o="2" d="M48 150C52 136 72 130 100 132C118 134 128 140 126 150C124 162 108 176 86 184C68 190 52 186 49 174C47 166 46 158 48 150Z"/>
+      <path class="org" data-o="3" d="M112 204C120 196 140 194 160 196C176 198 186 204 182 212C178 220 162 222 146 220C132 218 120 220 114 216C109 213 108 208 112 204Z"/>
+    </svg>
+    <button class="gpin" type="button" data-z="0" style="left:50%;top:5.5%" aria-label="1 · Щитовидная железа"><span>1</span></button>
+    <button class="gpin" type="button" data-z="1" style="left:64.2%;top:26%" aria-label="2 · Кровь и запасы"><span>2</span></button>
+    <button class="gpin" type="button" data-z="2" style="left:36%;top:41%" aria-label="3 · Печень и почки"><span>3</span></button>
+    <button class="gpin" type="button" data-z="3" style="left:61%;top:54.5%" aria-label="4 · Сахар"><span>4</span></button>
+  </div>
+  <ul class="olist">
+    <li><button type="button" data-z="0"><i>1</i><span class="tx"><b>Щитовидная железа</b><small>сонливость, зябкость, вес</small></span><svg class="ic"><use href="#i-right"/></svg></button></li>
+    <li><button type="button" data-z="1"><i>2</i><span class="tx"><b>Кровь и запасы</b><small>железо, B12, витамин D</small></span><svg class="ic"><use href="#i-right"/></svg></button></li>
+    <li><button type="button" data-z="2"><i>3</i><span class="tx"><b>Печень и почки</b><small>если банок 3 и больше</small></span><svg class="ic"><use href="#i-right"/></svg></button></li>
+    <li><button type="button" data-z="3"><i>4</i><span class="tx"><b>Сахар</b><small>спады после еды, тяга к сладкому</small></span><svg class="ic"><use href="#i-right"/></svg></button></li>
+  </ul>
+  <details id="tests">
+    <summary><span><b>Все 7 анализов</b><small>нормы, как сдавать и «+ в список»</small></span></summary>
+    <div class="groupt">Куда уходят силы</div>
+    <div class="stack" id="tg1"></div>
+    <div class="groupt">Что делают банки</div>
+    <div class="stack" id="tg2"></div>
+    <p class="note"><strong>Когда сдавать:</strong> утром натощак, без банки и кофе с утра. Сдавать всё подряд бесполезно: нужен список под ваши симптомы.</p>
+  </details>
+</div></section>
+
+<section id="today" class="alt"><div class="w">
+  <div class="k">Шаг 4 из 5 · с чего начать</div>
+  <h2>Как снизить - и не <em class="s">сорваться</em></h2>
+  <div class="fr y">
+    <small>Делать</small>
+    <ol class="steps">
+      <li><i>1</i><div><b>Минус одна банка каждые <span class="nw">3-4</span> дня.</b>Ваш график по калькулятору:
+        <div class="wean" id="wean" aria-live="polite"></div>
+      </div></li>
+      <li><i>2</i><div><b>Последний кофеин - до 14:00.</b>Половина кофеина ещё в крови через 5 часов.</div></li>
+      <li><i>3</i><div><b>Утром - вода и завтрак с белком.</b>Не банка на голодный желудок.</div></li>
+    </ol>
+  </div>
+  <div class="fr n">
+    <small>Не делать</small>
+    <ul>
+      <li><b>Бросать резко.</b>Голова может болеть несколько дней - и рука снова тянется к банке.</li>
+      <li><b>Мешать с алкоголем.</b>Энергетик не трезвит, а маскирует опьянение - человек пьёт больше.</li>
+      <li><b>Банка вместо сна за рулём.</b>Усталость никуда не делась - вы её просто не чувствуете.</li>
+    </ul>
+  </div>
+  <div class="kid">
+    <b>Если энергетики пьёт ваш ребёнок</b>
+    <p>Подростку безопасно до 3 мг кофеина на кг веса в день: при весе 50 кг это 150 мг - почти банка Monster. В Казахстане с 2025 года энергетики не продают до 21 года.</p>
+  </div>
+</div></section>
+
+<section id="invite"><div class="w">
+  <div class="k">Шаг 5 из 5 · чек⁠-⁠ап</div>
+  <h2>Разберём&nbsp;ваши анализы и вашу <em class="s">усталость</em></h2>
+  <p class="lead">Если без банки нет сил - причина не в банке. Её покажут анализы: чек⁠-⁠ап ищет, куда уходят силы, а не просто советует меньше пить.</p>
+
+  <div class="card case mt">
+    <div class="lbl">Случай из практики</div>
+    <h3>Аружан, 33 года</h3>
+    <div class="fr"><small>Было</small><p>Разбитость с утра, усталость к середине дня, выпадение волос</p></div>
+    <div class="fr"><small>Нашли</small><p>Скрытый железодефицит - низкий ферритин при нормальном гемоглобине</p></div>
+    <div class="fr y"><small>Стало</small><p>Больше энергии, дефицит железа восполнен</p></div>
+    <p class="note2">Результат индивидуален и зависит от исходных данных.</p>
+  </div>
+
+  <div class="k sub-k">Что даёт чек⁠-⁠ап</div>
+  <p class="gets">На чек⁠-⁠апе вы получите <strong>свой список анализов</strong>, узнаете, что прячется за усталостью, и уйдёте с планом: как снизить банки без срывов и вернуть силы без них.</p>
+
+</div>
+<div class="band alt"><div class="w">
+  <div class="k sub-k">Трёхэтапный метаболический чек⁠-⁠ап</div>
+  <h3 class="h3b">От анкеты до личного <em class="s">плана</em></h3>
+  <p class="sm" style="margin-top:6px">Zoom 1:1 · <span class="nw">60-90</span> минут</p>
+  <ol class="tl">
+    <li><div class="d">Этап 1</div><b>Анкета и список анализов</b><p>Короткая анкета на пару минут: что и сколько пьёте, сон, питание, лекарства, что уже пробовали. По ней составлю персональный список анализов, а если есть свежие - посмотрю, чего не хватает.</p><figure class="shot"><div class="fade"><img src="img/form_shot.webp?v=6" alt="Анкета «Заявка на чек⁠-⁠ап»: как это работает" width="780" height="912" loading="lazy"></div></figure></li>
+    <li><div class="d">Этап 2</div><b>Разбор анализов со мной</b><p>Один на один в Zoom, <span class="nw">60-90</span> минут: разбираем цифры и находим, где теряется энергия.</p></li>
+    <li class="f"><div class="d">Этап 3</div><b>Ваш план</b><p>Персональный протокол: питание, сон, как снизить банки без срывов, и <span class="nw">3-5</span> дней обратной связи.</p><figure class="shot"><div class="fade"><img src="img/proto2.webp?v=3" alt="Письмо с выводами по анализам, данные клиента скрыты" width="450" height="488" loading="lazy"></div><figcaption>Так выглядит письмо с выводами по вашим анализам. Данные клиента скрыты.</figcaption></figure></li>
+  </ol>
+
+  <div class="pc" id="pc">
+    <div class="pk">Итог</div>
+    <h3>У вас появляется <em class="s">определённость</em></h3>
+    <p>Больше никаких догадок. Вы знаете, что происходит с вашим телом, почему уходят силы и что делать каждый день.</p>
+    <div class="rbar" role="img" aria-label="План на 8-12 недель"><i></i></div>
+    <div class="ticks" aria-hidden="true"><span>Нед. 1</span><span style="left:27.3%">4</span><span style="left:63.6%">8</span><span>12</span></div>
+    <ul>
+      <li><span class="st"><svg class="ic"><use href="#i-check"/></svg></span><span><b>Понятная причина</b> вместо «всё в норме»</span></li>
+      <li><span class="st"><svg class="ic"><use href="#i-check"/></svg></span><span><b>Чёткий план на <span class="nw">8-12</span> недель</b> - день за днём</span></li>
+      <li><span class="st"><svg class="ic"><use href="#i-check"/></svg></span><span><b>Вы идёте к своей цели</b> по курсу, а не наугад</span></li>
+    </ul>
+    <p class="pq">Это и есть главное, ради чего приходят на чек⁠-⁠ап.</p>
+  </div>
+  <div class="cta"><a class="btn" href="https://forms.gle/igVPeinj4NKTAGSYA" target="_blank" rel="noopener noreferrer" data-ev="plan_form">Записаться на чек⁠-⁠ап</a></div>
+</div></div>
+<div class="w">
+
+  <div class="seats" id="ny">
+    <div class="k">До Нового года</div>
+    <div class="facts"><div><b id="cdD">--</b>дней до Нового года</div><div><b id="seats">~20</b>мест на чек⁠-⁠ап</div></div>
+    <p class="sm">Беру до 3 человек в неделю. Анализы готовятся несколько дней - лучше начать до праздников.</p>
+    <div class="book">
+      <div class="bk-h"><div><b>Запись на следующую неделю</b><small id="bkRange">--</small></div><span class="bn" id="bkBadge" hidden>Zoom</span></div>
+      <div class="bk-days" id="bkDays"></div>
+      <div class="bk-seats" id="bkSeats" hidden><div class="bk-s"><i></i><span>Место 1</span></div><div class="bk-s"><i></i><span>Место 2</span></div><div class="bk-s"><i></i><span>Место 3</span></div></div>
+      <p class="bk-note">До 3 чек⁠-⁠апов в неделю, Zoom <span class="nw">60-90</span> минут. Удобный день и время подберёт менеджер после анкеты.</p>
+    </div>
+  </div>
+
+  <div class="appeal" id="appeal">
+    <div class="lock au"><img src="img/logo.webp" alt="" width="44" height="44" loading="lazy"><span><b>Шынгыс Садык</b><small>Метаболическое здоровье</small></span></div>
+    <p>Если вы дочитали до сюда - скорее всего, <strong>усталость с вами уже давно.</strong></p>
+    <p>Вы пробовали меньше пить, высыпаться по выходным, пить витамины. А без банки сил так и нет.</p>
+    <p class="qt">Хорошая новость: причина часто уже видна в ваших цифрах. Нужно лишь правильно их прочитать - этим я и занимаюсь.</p>
+    <div class="k sub-k">Как я работаю</div>
+    <ul class="pl">
+      <li><span class="st on"><svg class="ic"><use href="#i-check"/></svg></span><span>Лично разберу ваши анализы</span></li>
+      <li><span class="st on"><svg class="ic"><use href="#i-check"/></svg></span><span>Объясню простым языком</span></li>
+      <li><span class="st on"><svg class="ic"><use href="#i-check"/></svg></span><span>Подберу только нужные анализы</span></li>
+      <li><span class="st on"><svg class="ic"><use href="#i-check"/></svg></span><span>Дам план, который можно начать в тот же день</span></li>
+      <li><span class="st on"><svg class="ic"><use href="#i-check"/></svg></span><span>Останусь на связи <span class="nw">3-5</span> дней после чек⁠-⁠апа</span></li>
+    </ul>
+    <p class="after">Первый шаг&nbsp;- <strong>короткая анкета на 2 минуты.</strong> Менеджер напишет в WhatsApp, ответит на вопросы и подберёт формат.</p>
+    <p>До Нового года&nbsp;- <strong>около <span class="js-seats">20</span> мест.</strong> Давайте начнём, пока они есть.</p>
+  </div>
+  <div class="mysum" id="mysum" hidden>
+    <div class="k">Ваши данные из гида</div>
+    <ul id="mysumL"></ul>
+    <p>Они подставятся в анкету - останется имя и телефон.</p>
+  </div>
+  <div class="cta"><a class="btn" href="https://forms.gle/igVPeinj4NKTAGSYA" target="_blank" rel="noopener noreferrer" data-ev="invite_form">Записаться на чек⁠-⁠ап</a><small>Короткая анкета, пара минут. Менеджер ответит в WhatsApp. Чек⁠-⁠ап платный, стоимость зависит от формата.</small></div>
+  <button class="btn ghost shr" id="shareGuide" type="button" data-ev="share_guide"><svg class="ic"><use href="#i-share"/></svg>Отправить другу на энергетиках</button>
+</div></section>
+
+<section id="sources" class="alt"><div class="w">
+  <details>
+    <summary>Источники (12)</summary>
+    <ol class="src">
+      <li>EFSA. Scientific Opinion on the safety of caffeine. EFSA Journal 2015;13(5):4102 - до 400 мг в день взрослым, до 200 мг за раз, беременным 200 мг, детям и подросткам 3 мг/кг; эспрессо 60 мл ~80 мг, фильтр-кофе 200 мл ~90 мг</li>
+      <li>Red Bull Energy Drink 250 мл - 80 мг кофеина, 27 г сахара (сайт производителя, Казахстан). Monster Energy 500 мл - 32 мг/100 мл кофеина, 11 г/100 мл сахара (этикетка). Adrenaline Rush 449 мл - до 30 мг/100 мл кофеина, 12,2 г/100 мл сахара (этикетка)</li>
+      <li>WHO. Guideline: sugars intake for adults and children, 2015 - свободный сахар менее 10% калорий, в идеале менее 5% (около 25 г)</li>
+      <li>Shah S.A. и соавт. J Am Heart Assoc 2019;8:e011318 - 946 мл энергетика за час: удлинение QTc и давление выше плацебо примерно на 5/4 мм рт. ст.</li>
+      <li>Drake C. и соавт. J Clin Sleep Med 2013;9:1195-1200 - 400 мг кофеина за 0, 3 и 6 часов до сна нарушали сон; за 6 часов - минус больше часа сна</li>
+      <li>Institute of Medicine (National Academies). Caffeine for the Sustainment of Mental Task Performance, 2001 - период полувыведения кофеина около 5 ч (1,5-9,5 ч)</li>
+      <li>Ajibo C. и соавт. Public Health 2024;227:274-281 - обзор 57 исследований, более 1,2 млн детей и молодых людей: энергетики связаны с плохим сном, тревогой, депрессией</li>
+      <li>CDC. Alcohol and Caffeine - смешивание с алкоголем маскирует опьянение</li>
+      <li>ВОЗ Европа, 05.02.2025 - Казахстан запретил продажу энергетиков лицам до 21 года; более 40% школьников регулярно пьют энергетики (данные Минздрава РК)</li>
+      <li>Juliano L.M., Griffiths R.R. Psychopharmacology 2004;176:1-29 - синдром отмены кофеина: головная боль, усталость, начинается через 12-24 ч</li>
+      <li>Malik V.S. и соавт. Diabetes Care 2010;33:2477-2483 - 1-2 сладких напитка в день: риск диабета 2 типа выше на 26%. Vaucher P. и соавт. CMAJ 2012;184:1247-1254 - ферритин ниже 50 при нормальном гемоглобине: железо уменьшило усталость. Harb J.N. и соавт. BMJ Case Rep 2016 - поражение печени при 4-5 энергетиках в день</li>
+      <li>Фото к самопроверке: Pexels (лицензия Pexels)</li>
+    </ol>
+  </details>
+  <footer>Просветительский материал, не медицинская рекомендация. Не отменяйте и не меняйте дозу препарата самостоятельно. Границы норм различаются между лабораториями.<br><br>Шынгыс Садык · Метаболическое здоровье · @shynggys_health<br>© 2026 Шынгыс Садык. Копирование и распространение материалов без письменного разрешения автора запрещено.</footer>
+</div></section>
+</main>
+
+<div class="bar" id="sticky"><div class="in"><button class="fab" id="fab" type="button" aria-label="Открыть мой список анализов"><svg class="ic"><use href="#i-list"/></svg><b id="fabn">0</b></button><div class="bi" id="stickyT"><b>Чек⁠-⁠ап</b><span>~20 мест до Нового года</span></div><a class="btn" href="https://forms.gle/igVPeinj4NKTAGSYA" target="_blank" rel="noopener noreferrer" data-ev="sticky_form">Записаться</a></div></div>
+
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="shTitle">
+  <div class="grab"></div>
+  <div class="sh-h"><h3 id="shTitle"></h3><button class="x-btn" id="shClose" type="button" aria-label="Закрыть"><svg class="ic"><use href="#i-x"/></svg></button></div>
+  <div id="shBody"></div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(()=>{if(window.top!==window.self){try{window.top.location.replace(window.self.location.href)}catch(e){document.documentElement.style.display='none'}}})();
+(()=>{
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const FORM='https://forms.gle/igVPeinj4NKTAGSYA';
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const buzz=()=>{try{if(navigator.vibrate&&navigator.userActivation&&navigator.userActivation.hasBeenActive)navigator.vibrate(8)}catch(e){}};
+// No persistence: every visit starts clean (quiz at question 1, empty list). Old saved data is wiped.
+try{['ans','list'].forEach(k=>localStorage.removeItem('en_'+k))}catch(e){}
+const store={get(k,d){return d},set(){}};
+// Analytics hook: plug Yandex Metrica / GA later
+window.track=(ev,data)=>{try{if(window.ym&&window.YM_ID)ym(window.YM_ID,'reachGoal',ev,data);if(window.gtag)gtag('event',ev,data||{});console.log('[track]',ev,data||'')}catch(e){}};
+document.addEventListener('click',e=>{const a=e.target.closest('[data-ev]');if(a)track(a.dataset.ev)});
+const toast=t=>{const el=$('#toast');el.textContent=t;el.classList.toggle('top',!!sheetMode);el.classList.toggle('bar-on',$('#sticky').classList.contains('on'));el.classList.add('on');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('on'),2200)};
+const ICO=n=>'<svg class="ic"><use href="#i-'+n+'"/></svg>';
+
+// Brand lockup (МГ): name line fitted to the subtitle width, trailing letter-spacing excluded on both lines
+const fit=()=>$$('.lock').forEach(l=>{const b=l.querySelector('b'),m=l.querySelector('small');if(!b||!m)return;
+  const w=el=>el.getBoundingClientRect().width-(parseFloat(getComputedStyle(el).letterSpacing)||0);
+  b.style.fontSize='16px';for(let i=0;i<3;i++){const k=w(m)/w(b);if(!(k>0))break;b.style.fontSize=(parseFloat(b.style.fontSize)*k).toFixed(2)+'px'}});
+(document.fonts?document.fonts.ready:Promise.resolve()).then(fit);
+
+// Section nav + cabinet-style progress («Раздел N из 5 · осталось ~N мин»); bottom bar show/hide
+const secs=['quiz','why','map','today','invite'].map(id=>document.getElementById(id));
+const chips=$('#chips'),chipA=$$('#chips a');let cur=null;
+const setChip=id=>{if(id===cur)return;cur=id;chipA.forEach(a=>{const on=a.getAttribute('href')==='#'+id;a.classList.toggle('on',on);if(on)chips.scrollTo({left:a.offsetLeft-chips.clientWidth/2+a.offsetWidth/2})})};
+const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)setChip(e.target.id)}),{rootMargin:'-45% 0px -50% 0px'});secs.forEach(x=>sio.observe(x));
+const nav=$('#nav'),stk=$('#sticky'),quizEl=$('#quiz'),pbar=$('#pbar'),pTxt=$('#pTxt');
+new IntersectionObserver(([e])=>nav.classList.toggle('on',!e.isIntersecting&&e.boundingClientRect.top<0)).observe($('#cs'));
+let ticking=false;
+const onScroll=()=>{ticking=false;const h=document.documentElement,mid=innerHeight*.5;let c=0,tot=0;
+  secs.forEach((x,i)=>{const r=x.getBoundingClientRect();let f=(mid-r.top)/r.height;f=f<0?0:f>1?1:f;if(r.top<mid)c=i;tot+=f});
+  pbar.style.width=(Math.min(1,h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight))*100).toFixed(1)+'%';const m=Math.max(1,Math.ceil(6*(1-tot/5)));
+  const end=tot>=4.9;pTxt.textContent=(c+1)+' из 5 · '+(end?'конец':'~'+m+' мин');pTxt.setAttribute('aria-label','Раздел '+(c+1)+' из 5 · '+(end?'вы дочитали до конца':'осталось ~'+m+' мин'));
+  // bottom bar never sits over the quiz answer buttons: only after the result, past the quiz, or with a list away from the quiz
+  const q=quizEl.getBoundingClientRect(),done=$('#qres').classList.contains('on');
+  stk.classList.toggle('on',q.bottom<0||done&&q.top<innerHeight*.5||list.size>0&&h.scrollTop>400&&q.top>innerHeight)};
+addEventListener('scroll',()=>{if(ticking)return;ticking=true;requestAnimationFrame(onScroll)},{passive:true});
+
+// QUIZ
+const Q=[['Утро не начинается без банки или кофе','Без них не включаетесь в работу'],['После обеда «выключаетесь»','Тянет спать, хочется ещё банку'],['Спите 7 часов, а встаёте разбитым','Сон есть, отдыха нет'],['Сердце колотится без причины','В покое, без нагрузки'],['Раздражительность или тревога без банки','Особенно к вечеру'],['Тянет на сладкое','Или на новую банку'],['Пьёте банку или кофе после 16:00','Хотя бы иногда'],['Усталость не проходит даже после выходных','Отоспались, а сил нет']];
+let qi=0,ans=store.get('ans',[]);
+const slide=$('#qslide'),qans=$('#qans');
+const FACT={2:['Знали ли вы?','В исследовании кофеин, выпитый за 6 часов до сна, отнял больше часа сна - и люди этого не заметили. Утром кажется, что вы просто «не выспались».','moon'],5:['Вы не одни','В Казахстане больше 40% школьников регулярно пьют энергетики, а взрослые на сменах - ещё чаще. С 2023 года я провёл 1 000+ консультаций - усталость с банкой встречается постоянно.','users']};
+let factShown={};
+function renderQ(){ if(qi>=Q.length)return analyzing();
+  if(FACT[qi]&&!factShown[qi]){factShown[qi]=1;return renderFact(qi)}
+  qans.hidden=false;
+  slide.innerHTML='<img class="qimg" src="img/e'+(qi+1)+'.webp?v=1" alt="" width="720" height="405" decoding="async"><div class="k qk">Вопрос '+(qi+1)+'</div><h3>'+Q[qi][0]+'?</h3><p class="qd">'+Q[qi][1]+'</p>';
+  $('#qcount').textContent=(qi+1)+' из '+Q.length;$('#qbar').style.width=((qi+1)/Q.length*100)+'%';$('#qback').disabled=qi===0;
+  $('#qrun').style.display='';$('#qres').classList.remove('on');
+  // lock the card height to the question layout so Да/Нет never move between questions, facts and the analysing step
+  if(renderQ._w!==innerWidth){renderQ._w=innerWidth;const r=$('#qrun');r.style.minHeight='';r.style.minHeight=r.offsetHeight+'px'} }
+function renderFact(i){const f=FACT[i];
+  slide.innerHTML='<div class="fact"><span class="ti">'+ICO(f[2])+'</span><div class="k qk">'+f[0]+'</div><p>'+f[1]+'</p><button class="btn" id="qnext" type="button">Дальше '+ICO('arrow')+'</button></div>';
+  qans.hidden=true;$('#qnext').onclick=()=>{buzz();renderQ()};}
+function analyzing(){$('#qbar').style.width='100%';qans.hidden=true;$('#qback').disabled=true;$('#qcount').textContent='Готово';
+  if(reduce)return showRes();
+  const st=['Сверяю ответы с вашим кофеином','Подбираю анализы под ваши сигналы','Готовлю вывод'];
+  slide.innerHTML='<div class="anl"><ul>'+st.map(s=>'<li><span class="st">'+ICO('check')+'</span>'+s+'</li>').join('')+'</ul></div>';
+  const li=slide.querySelectorAll('li');li.forEach((l,i)=>setTimeout(()=>l.classList.add('ok'),150+i*250));
+  setTimeout(showRes,900);}
+function answer(v){buzz();ans[qi]=v;store.set('ans',ans);if(qi===0)track('quiz_started');if(!answer._pre){answer._pre=1;for(let i=2;i<=8;i++){const im=new Image();im.src='img/e'+i+'.webp?v=1'}}qi++;renderQ()}
+$('#qyes').onclick=()=>answer(1);$('#qno').onclick=()=>answer(0);
+$('#qback').onclick=()=>{if(qi>0){qi--;renderQ()}};
+$('#qagain').onclick=()=>{ans=[];store.set('ans',ans);qi=0;factShown={};renderQ();updSticky(null);quizEl.scrollIntoView();onScroll()};
+const QT=[['fer','ttg'],['glu','a1c'],['fer','d'],['ttg'],['b12'],['glu','a1c'],['fer'],['fer','b12','ttg']];
+function showRes(){ const n=ans.filter(Boolean).length;$('#qbar').style.width='100%';$('#qrun').style.display='none';qans.hidden=false;const r=$('#qres');r.classList.add('on');
+  $('#rnum').textContent=n;$('#rbar').style.width=(n/8*100)+'%';$('#score').setAttribute('aria-label','Совпало '+n+' из 8');
+  const hi=n>=3;
+  $('#rtitle').textContent=hi?'Совпало '+n+' - банка прячет усталость':(n===0?'Сигналов нет - отлично':'Совпало немного - уже хорошо');
+  $('#rtext').textContent=hi?'Банка закрывает сигнал усталости, но не её причину. Чаще всего за ней стоят низкий ферритин, дефициты витаминов, щитовидная железа или скачки сахара - это видно в анализах.':'Но если без банки или кофе сил нет, причина может быть не на виду. Посмотрите схему и анализы ниже.';
+  const m=Q.filter((q,i)=>ans[i]);
+  $('#rmatched').innerHTML=m.length?'<ul class="pl">'+m.map(q=>'<li><span class="st on">'+ICO('check')+'</span><span>'+q[0]+'</span></li>').join('')+'</ul>':'';
+  const rec=[...new Set(QT.flatMap((t,i)=>ans[i]?t:[]))];
+  $('#rrec').innerHTML=rec.length?'<div class="rec"><div class="k">Анализы под ваши ответы</div><ol class="steps">'+rec.map((id,i)=>'<li><i>'+(i+1)+'</i><span>'+byId[id].t+'</span></li>').join('')+'</ol><button class="btn ghost" id="addAll" type="button">'+ICO('plus')+'Добавить все в мой список</button></div>':'';
+  const aa=$('#addAll');aa&&(aa.onclick=()=>{buzz();rec.forEach(id=>list.add(id));store.set('list',[...list]);syncList();onScroll();toast('Добавлено: '+rec.length+' ✓');track('list_add_all',{n:rec.length})});
+  const cta=$('#rcta');cta.className='btn'+(hi?'':' ghost');cta.textContent=hi?'Записаться на чек⁠-⁠ап':'Задать вопрос';quizN=n;updSum();
+  track(hi?'quiz_3plus':'quiz_low',{n});updSticky(n);onScroll(); }
+function updSticky(n){ $('#stickyT').innerHTML= n==null?'<b>Чек⁠-⁠ап</b><span>'+seatsTxt()+' до Нового года</span>': n>=3?'<b>Совпало '+n+' из 8</b><span>Разберём? · '+seatsTxt()+'</span>':'<b>Есть вопросы?</b><span>Ответим в WhatsApp</span>'; }
+const initQuiz=()=>{if(ans.length>=Q.length){qi=Q.length;showRes()}else{qi=Math.min(ans.length,Q.length-1);factShown=Object.fromEntries(Object.keys(FACT).filter(k=>k<=qi).map(k=>[k,1]));renderQ()}};
+
+// TESTS data
+const T=[
+ {g:1,id:'fer',ic:'tube',t:'Ферритин + общий анализ крови',thr:'дефицит: ферритин < 30 нг/мл · при усталости важно и < 50',p:'Запас железа. Ферритин ниже 50 - частая скрытая причина усталости даже при нормальном гемоглобине: в исследовании железо уменьшило усталость у таких людей.',L:'Ферритин + общий анализ крови'},
+ {g:1,id:'b12',ic:'pill',t:'Витамин B12 + фолиевая кислота',thr:'B12: норма <span class="nw">148-740</span> пмоль/л · низ нормы - смотреть глубже',p:'Без них кровь хуже переносит кислород: слабость, туман в голове, одышка на лестнице.',L:'Витамин B12 + фолиевая кислота'},
+ {g:1,id:'d',ic:'sun',t:'Витамин D (25-OH)',thr:'дефицит: < 20 нг/мл',p:'У тех, кто работает в помещении и на ночных сменах, дефицит встречается часто.',L:'Витамин D (25-OH)'},
+ {g:1,id:'ttg',ic:'thy',t:'ТТГ',thr:'гормон, который управляет щитовидной железой',p:'Если щитовидная железа работает медленно - сонливость, зябкость, вес растёт. Кофеин эту усталость только маскирует.',L:'ТТГ'},
+ {g:2,id:'glu',ic:'drop',t:'Глюкоза + инсулин натощак',thr:'глюкоза до 5,5 ммоль/л · по двум цифрам считают индекс HOMA-IR',p:'Сладкие банки каждый день - нагрузка на сахар. Резкие спады сахара ощущаются как «выключился после обеда».',L:'Глюкоза + инсулин натощак (HOMA-IR)'},
+ {g:2,id:'a1c',ic:'flask',t:'Гликированный гемоглобин HbA1c',thr:'норма < 5,7%',p:'Средний сахар за 3 месяца. 1-2 сладких напитка в день повышают риск диабета 2 типа на 26%.',L:'Гликированный гемоглобин HbA1c'},
+ {g:2,id:'liv',ic:'flame',t:'АЛТ, АСТ и креатинин',thr:'печень и почки · если банок 3 и больше в день',p:'Описаны случаи поражения печени и почек у тех, кто пил по <span class="nw">4-5</span> банок в день неделями. Это редкость, но при большом объёме проверить стоит.',L:'АЛТ, АСТ и креатинин'}];
+const byId=Object.fromEntries(T.map(x=>[x.id,x]));
+let list=new Set(store.get('list',[]).filter(id=>byId[id]));
+const addBtn=id=>'<button class="cp" type="button" data-add="'+id+'" aria-pressed="false">'+ICO('plus')+'<span>в список</span></button>';
+['#tg1','#tg2'].forEach((sel,gi)=>{$(sel).innerHTML=T.filter(x=>x.g===gi+1).map(x=>
+ '<div class="acc" id="acc-'+x.id+'"><button class="acc-h" type="button" aria-expanded="false" aria-controls="b-'+x.id+'"><span class="ti">'+ICO(x.ic)+'</span><span class="tx"><b>'+x.t+'</b><small>'+x.thr+'</small></span><span class="pm" aria-hidden="true">+</span></button><div class="acc-b" id="b-'+x.id+'"><p>'+x.p+'</p>'+addBtn(x.id)+'</div></div>').join('')});
+$$('.acc-h').forEach(h=>h.onclick=()=>{const c=h.parentElement,o=!c.classList.contains('open');c.classList.toggle('open',o);h.setAttribute('aria-expanded',o);h.querySelector('.pm').textContent=o?'−':'+';if(o)track('test_open',{id:c.id})});
+function toggleList(id){buzz();if(list.has(id)){list.delete(id);toast('Убрано из списка')}else{list.add(id);toast('Добавлено в список ✓');track('list_add',{id})}store.set('list',[...list]);syncList();onScroll()}
+function syncList(){ $$('[data-add]').forEach(b=>{const on=list.has(b.dataset.add);b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);b.querySelector('span').textContent=on?'в списке':'в список';b.querySelector('use').setAttribute('href',on?'#i-check':'#i-plus')});
+  $('#fabn').textContent=list.size;window.__calc&&updSum();$('#fab').classList.toggle('on',list.size>0);$('#fab').setAttribute('aria-label','Открыть мой список анализов ('+list.size+')');if(sheetMode==='list')openList() }
+document.addEventListener('click',e=>{const b=e.target.closest('[data-add],[data-rm]');if(b)toggleList(b.dataset.add||b.dataset.rm)});
+
+// SHEET
+let sheetMode=null,lastFocus=null;
+function openSheet(title,html,mode){lastFocus=document.activeElement;sheetMode=mode;$('#shTitle').textContent=title;$('#shBody').innerHTML=html;$('#sheet').scrollTop=0;$('#scrim').classList.add('on');$('#sheet').classList.add('on');document.body.style.overflow='hidden';setTimeout(()=>$('#shClose').focus(),50)}
+function closeSheet(){sheetMode=null;$('#scrim').classList.remove('on');$('#sheet').classList.remove('on');document.body.style.overflow='';$$('.gpin.on').forEach(p=>p.classList.remove('on'));$$('#gi .sel').forEach(g=>g.classList.remove('sel'));lastFocus&&lastFocus.focus&&lastFocus.focus({preventScroll:true})}
+$('#scrim').onclick=closeSheet;$('#shClose').onclick=closeSheet;addEventListener('keydown',e=>{if(e.key==='Escape'&&sheetMode)closeSheet()});
+// swipe down to close
+(()=>{let y0=null;const s=$('#sheet');s.addEventListener('touchstart',e=>{if(s.scrollTop<=0)y0=e.touches[0].clientY},{passive:true});s.addEventListener('touchmove',e=>{if(y0==null)return;const dy=e.touches[0].clientY-y0;if(dy>0)s.style.transform='translateY('+dy+'px)'},{passive:true});s.addEventListener('touchend',e=>{if(y0==null)return;const dy=e.changedTouches[0].clientY-y0;s.style.transform='';y0=null;if(dy>90)closeSheet()})})();
+
+// MAP
+const Z=[{t:'Щитовидная железа',s:[['Сонливость, зябкость, вес растёт','ttg']]},{t:'Кровь и запасы',s:[['Слабость, одышка на лестнице, выпадают волосы','fer'],['Туман в голове, покалывание в руках','b12'],['Мало солнца, работа в помещении','d']]},{t:'Печень и почки',s:[['Пьёте 3 банки и больше в день','liv']]},{t:'Сахар',s:[['«Выключаетесь» после еды, тянет на сладкое','glu'],['Сладкие банки каждый день','a1c']]}];
+function openZone(i){buzz();const z=Z[i];track('map_zone',{z:i});
+ openSheet((i+1)+' · '+z.t, z.s.map(([sym,id])=>'<div class="sym"><i></i><span>'+sym+'</span></div><div class="trow"><b>'+byId[id].t+'</b>'+addBtn(id)+'</div>').join('')+
+ '<a class="btn" href="'+FORM+'" target="_blank" rel="noopener noreferrer" data-ev="map_form">Записаться на чек⁠-⁠ап</a><button class="btn ghost" type="button" data-goto="tests" data-close>Все анализы</button>','zone');
+ $$('.gpin').forEach(p=>p.classList.toggle('on',+p.dataset.z===i));$$('#gi [data-o]').forEach(g=>g.classList.toggle('sel',+g.dataset.o===i));syncList()}
+$$('[data-z]').forEach(el=>el.addEventListener('click',()=>openZone(+el.dataset.z)));
+document.addEventListener('click',e=>{const g=e.target.closest('[data-goto]');if(e.target.closest('[data-close]'))closeSheet();if(g){const t=document.getElementById(g.dataset.goto);if(t){if(t.tagName==='DETAILS')t.open=true;t.scrollIntoView()}}});
+
+// MY LIST
+const listText=()=>'Мой список анализов (гид «Энергетики»):\n'+[...list].map((id,i)=>(i+1)+'. '+byId[id].L).join('\n')+'\n\nСдавать утром натощак, без банки и кофе с утра.\nИз гида Шынгыса Садыка @shynggys_health';
+function openList(){const html=list.size?'<ol class="mlist">'+[...list].map(id=>'<li><span>'+byId[id].L+'</span><button type="button" data-rm="'+id+'" aria-label="Убрать из списка">'+ICO('x')+'</button></li>').join('')+'</ol><div class="row2"><button class="btn ghost" id="cpy" type="button">'+ICO('copy')+'Скопировать</button><button class="btn" id="shr" type="button">'+ICO('share')+'Отправить</button></div><p class="sm">Хотите, чтобы список подобрали именно под вас?</p><a class="btn ghost" href="'+FORM+'" target="_blank" rel="noopener noreferrer" data-ev="list_form">Заполнить анкету</a>':'<p class="empty">Список пуст. Добавляйте анализы кнопкой «+ в список».</p>';
+ if(sheetMode==='list'){$('#shBody').innerHTML=html;$('#shTitle').textContent='Мой список анализов ('+list.size+')'}else openSheet('Мой список анализов ('+list.size+')',html,'list');
+ const c=$('#cpy'),s=$('#shr');
+ c&&(c.onclick=async()=>{try{await navigator.clipboard.writeText(listText());toast('Скопировано ✓')}catch(_){prompt('Скопируйте список:',listText())}track('list_copy')});
+ s&&(s.onclick=async()=>{if(navigator.share){try{await navigator.share({title:'Мой список анализов',text:listText()})}catch(_){}}else location.href='https://wa.me/?text='+encodeURIComponent(listText());track('list_share')});}
+$('#fab').onclick=()=>{buzz();openList();track('list_open')};
+syncList();initQuiz();onScroll();
+
+// CAFFEINE CALCULATOR (label data, see sources). Counts are not saved between visits.
+const DR=[{id:'adr',n:'Adrenaline Rush',v:'449 мл · ~135 мг',mg:135,su:55,en:1},{id:'mon',n:'Monster',v:'500 мл · 160 мг',mg:160,su:55,en:1},{id:'rb',n:'Red Bull',v:'250 мл · 80 мг',mg:80,su:27,en:1},{id:'cof',n:'Кофе',v:'чашка 200 мл · ~90 мг',mg:90,su:0,en:0}];
+const cnt={};DR.forEach(d=>cnt[d.id]=0);let quizN=null,calcTouched=false;
+$('#drinks').innerHTML=DR.map(d=>'<li><span class="tx"><b>'+d.n+'</b><small>'+d.v+'</small></span><span class="stp"><button type="button" data-dm="'+d.id+'" aria-label="Меньше: '+d.n+'" disabled>−</button><output id="o-'+d.id+'">0</output><button class="pl" type="button" data-dp="'+d.id+'" aria-label="Больше: '+d.n+'">+</button></span></li>').join('');
+const tot=()=>DR.reduce((a,d)=>({mg:a.mg+d.mg*cnt[d.id],su:a.su+d.su*cnt[d.id],cans:a.cans+(d.en?cnt[d.id]:0)}),{mg:0,su:0,cans:0});
+const plural=(n,a,b,c)=>{const m=n%10,h=n%100;return m===1&&h!==11?a:m>=2&&m<=4&&(h<12||h>14)?b:c};
+function updCalc(){const t=tot();$('#cMg').textContent=t.mg;const bar=$('#cBar');bar.querySelector('i').style.width=Math.min(100,t.mg/400*100)+'%';bar.classList.toggle('over',t.mg>400);
+  DR.forEach(d=>{$('#o-'+d.id).textContent=cnt[d.id];document.querySelector('[data-dm="'+d.id+'"]').disabled=!cnt[d.id];document.querySelector('[data-dp="'+d.id+'"]').disabled=cnt[d.id]>=9});
+  const tsp=Math.round(t.su/4),kg=Math.round(t.su*365/1000);
+  let st;if(!t.mg)st='Нажмите «+» у всего, что пьёте за обычный день.';
+  else st=(t.mg>400?'<strong>Выше дневного предела</strong> в 400 мг. ':t.mg>200?'<strong>'+Math.round(t.mg/4)+'% дневного предела.</strong> Больше 200 мг за раз - уже много. ':'<strong>'+Math.round(t.mg/4)+'% дневного предела.</strong> ')+(t.su?'Сахар: '+t.su+' г - '+tsp+' '+plural(tsp,'чайная ложка','чайные ложки','чайных ложек')+', за год около '+kg+' кг.':'');
+  $('#cStat').innerHTML=st;const sp=$('#spoons');if(sp){const n=Math.min(40,tsp);sp.innerHTML=Array.from({length:n},(_,i)=>'<i class="'+(i<6?'on':'x')+'"></i>').join('')}wean(t.cans);updSum()}
+document.addEventListener('click',e=>{const p=e.target.closest('[data-dp],[data-dm]');if(!p)return;buzz();const id=p.dataset.dp||p.dataset.dm;cnt[id]=Math.max(0,Math.min(9,cnt[id]+(p.dataset.dp?1:-1)));if(!calcTouched){calcTouched=true;track('calc_used')}updCalc()});
+function wean(n){const w=$('#wean');if(!n){w.innerHTML='<p>'+(calcTouched?'Энергетиков в калькуляторе нет - отлично. Если пьёте кофе, держите последнюю чашку до 14:00.':'Отметьте свои банки в калькуляторе наверху - здесь появится график по дням.')+'</p>';return}
+  const rows=[];for(let k=n-1,d=1;k>=0;k--,d+=4){rows.push('<div><b>Дни '+d+'-'+(d+3)+'</b><span>'+(k?k+' '+plural(k,'банка','банки','банок')+' в день':'без банок')+'</span></div>')}
+  w.innerHTML='<div><b>Сейчас</b><span>'+n+' '+plural(n,'банка','банки','банок')+' в день</span></div>'+rows.join('')+'<p>Если и через 2 недели без банки нет сил - причина не в банке. Её покажут анализы.</p>'}
+// personal summary + prefilled chek-up form (Google Forms pre-fill; free text only)
+const GF='https://docs.google.com/forms/d/e/1FAIpQLScBvTGayK1vKHuTumSd2vtiLf6al23PuO66CgHb1JDUvuRiRg/viewform';
+function sumText(){const t=tot(),parts=[];
+  const dr=DR.filter(d=>cnt[d.id]).map(d=>cnt[d.id]+' × '+d.n);if(dr.length)parts.push('В день пью: '+dr.join(', ')+' (~'+t.mg+' мг кофеина, '+t.su+' г сахара).');
+  if(quizN!=null){const m=Q.filter((q,i)=>ans[i]).map(q=>q[0].toLowerCase());parts.push('Самопроверка: совпало '+quizN+' из 8'+(m.length?' - '+m.join('; '):'')+'.')}
+  if(list.size)parts.push('Анализы в моём списке: '+[...list].map(id=>byId[id].L).join(', ')+'.');
+  return parts.join('\n')}
+function formURL(){const q=new URLSearchParams({usp:'pp_url'});q.append('entry.1795721506','Усталость, нет энергии, сонливость');q.append('entry.1457571670','__other_option__');q.append('entry.1457571670.other_option_response','Гид по энергетикам');const tx=sumText();if(tx)q.append('entry.1541881117',tx);return GF+'?'+q.toString()}
+document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(a&&/forms\.gle\/igVPeinj4NKTAGSYA|1FAIpQLScBvTGayK1vKHuTumSd2vtiLf6al23PuO66CgHb1JDUvuRiRg/.test(a.href))a.href=formURL()},true);
+function updSum(){const t=tot(),L=[];if(t.mg)L.push(['Кофеин в день',t.mg+' мг']);if(t.su)L.push(['Сахар в день',t.su+' г']);if(quizN!=null)L.push(['Самопроверка',quizN+' из 8']);if(list.size)L.push(['Анализов в списке',list.size]);
+  $('#mysum').hidden=!L.length;$('#mysumL').innerHTML=L.map(r=>'<li><span>'+r[0]+'</span><b>'+r[1]+'</b></li>').join('')}
+$('#shareGuide').onclick=async()=>{const u='https://shynggyssadyk.github.io/energetiki/',tx='Посчитай, сколько кофеина и сахара в твоём дне - и что прячет банка:';if(navigator.share){try{await navigator.share({title:'Энергетики и усталость',text:tx,url:u})}catch(_){}}else location.href='https://wa.me/?text='+encodeURIComponent(tx+' '+u)};
+window.__calc=1;updCalc();
+
+// hero background video: plays muted inline, no controls; skipped on Save-Data / reduced motion
+(()=>{const v=$('#heroVid');if(!v)return;const c=navigator.connection;if(reduce||(c&&(c.saveData||/2g/.test(c.effectiveType||''))))return;
+ v.src='img/hero.mp4?v=2';v.muted=true;v.load();
+ const go=()=>{const pr=v.play();pr&&pr.catch(()=>{})};v.addEventListener('canplay',go,{once:true});
+ new IntersectionObserver(([e])=>{if(e.isIntersecting){v.paused&&go()}else v.pause()}).observe(v);})();
+document.addEventListener('contextmenu',e=>{if(e.target.closest('img,video'))e.preventDefault()});document.addEventListener('dragstart',e=>{if(e.target.closest('img,video'))e.preventDefault()});
+// seats + days to New Year (Almaty, UTC+5). Seats = real capacity: 3 per week until 31 Dec.
+function nyLeftMs(){return Date.UTC(2026,11,31,19,0,0)-Date.now()}
+function seatsLeft(){return Math.max(0,Math.round(3*nyLeftMs()/864e5/7))}
+function seatsTxt(){return '~'+seatsLeft()+' мест'}
+(()=>{const ny=$('#ny');if(!ny)return;if(nyLeftMs()<=0){ny.style.display='none';return}
+ $('#seats').textContent='~'+seatsLeft();$$('.js-seats').forEach(e=>e.textContent=seatsLeft());updSticky(null);
+ const tick=()=>{$('#cdD').textContent=Math.floor(Math.max(0,nyLeftMs())/864e5)};tick();setInterval(tick,6e4);
+ // next week (Mon-Sun) in Almaty time, real dates
+ const nowA=new Date(Date.now()+5*36e5);const dow=(nowA.getUTCDay()+6)%7;const mon=new Date(Date.UTC(nowA.getUTCFullYear(),nowA.getUTCMonth(),nowA.getUTCDate()+7-dow));
+ const MN=['янв','фев','мар','апр','мая','июн','июл','авг','сен','окт','ноя','дек'],DN=['Пн','Вт','Ср','Чт','Пт','Сб','Вс'];
+ const days=[...Array(7)].map((_,i)=>new Date(mon.getTime()+i*864e5));
+ $('#bkRange').textContent=days[0].getUTCDate()+' '+MN[days[0].getUTCMonth()]+' - '+days[6].getUTCDate()+' '+MN[days[6].getUTCMonth()];
+ $('#bkDays').innerHTML=days.map((d,i)=>'<div class="bk-d'+(i>4?' we':'')+'"><span>'+DN[i]+'</span><b>'+d.getUTCDate()+'</b></div>').join('');
+
+ // REAL bookings, set by Shynggys. Applies only to that exact week; other weeks fall back to neutral slots.
+ const BOOKINGS={};
+ const wk=mon.toISOString().slice(0,10),bk=BOOKINGS[wk];
+ if(bk){const left=Math.max(0,3-bk.taken);
+   $$('#bkSeats .bk-s').forEach((el,i)=>{const busy=i<bk.taken;el.classList.add(busy?'busy':'free');el.querySelector('span').textContent=busy?'Занято':'Свободно'});
+   $('#bkSeats').hidden=false;$('#bkBadge').hidden=false;$('#bkBadge').textContent=left===1?'Осталось 1 место':left===0?'Мест нет':'Осталось '+left+' места';}
+})();
+// dark plan frame: photo is attached only when the frame approaches the viewport
+(()=>{const pc=$('#pc');if(!pc)return;const io=new IntersectionObserver(([e])=>{if(e.isIntersecting){pc.classList.add('bg');io.disconnect()}},{rootMargin:'800px 0px'});io.observe(pc)})();
+// CAN HERO: shrink and lift the can while scrolling; transform/opacity only
+(()=>{const cs=$('#cs'),cw=$('#canw'),hk=$('#hook'),dn=$('#down');if(!cs||reduce)return;let tk=false;
+ const f=()=>{tk=false;const p=Math.min(1,Math.max(0,scrollY/Math.max(1,cs.offsetHeight-innerHeight)));
+  cw.style.transform='translateY('+(-p*8)+'svh) scale('+(1-p*.55).toFixed(3)+')';cw.style.opacity=(1-Math.max(0,p-.6)*2.4).toFixed(3);
+  hk.style.opacity=(1-p*2.2).toFixed(3);hk.style.transform='translateY('+(-p*40)+'px)';dn.style.opacity=p>.04?'0':'1'};
+ addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(f)}},{passive:true});f()})();
+// numbers and bars animate once when they come into view
+(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;io.unobserve(e.target);const el=e.target;
+  if(el.dataset.cnt!=null){const to=+el.dataset.cnt;if(reduce){el.textContent=to;return}const t0=performance.now(),d=1200;const st=now=>{const k=Math.min(1,(now-t0)/d),v=Math.round(to*(1-Math.pow(1-k,3)));el.textContent=v;if(k<1)requestAnimationFrame(st)};el.textContent=0;requestAnimationFrame(st)}
+  if(el.id==='decay'){el.classList.add('go');const p=$('#dPct');if(reduce){p.textContent='50%';return}const t0=performance.now(),d=2600;const st=now=>{const k=Math.min(1,(now-t0)/d),v=Math.round(100-50*(1-Math.pow(1-k,2)));p.textContent=v+'%';if(k<1)requestAnimationFrame(st)};requestAnimationFrame(st)}
+  if(el.id==='wean')el.classList.add('go')}),{threshold:.4});
+ $$('[data-cnt]').forEach(x=>io.observe(x));$('#decay')&&io.observe($('#decay'));$('#wean')&&io.observe($('#wean'))})();
+track('page_view');
+})();
+</script>
+</body>
+</html>
