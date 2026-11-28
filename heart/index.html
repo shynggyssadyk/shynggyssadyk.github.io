@@ -494,6 +494,9 @@ footer{padding:26px 0 30px;font-size:13px;line-height:1.5;color:var(--ink2)}
 .tip{position:absolute;z-index:45;background:var(--ink);color:#fff;font-size:14px;line-height:1.45;padding:10px 12px;border-radius:12px;opacity:0;pointer-events:none;transition:opacity .15s}
 .tip.on{opacity:1;pointer-events:auto}
 img,video{-webkit-touch-callout:none;-webkit-user-drag:none;user-select:none}
+
+/* top section nav removed 28.11.2026 at the owner's request */
+.nav{display:none!important}section{scroll-margin-top:12px}
 </style>
 </head>
 <body>
@@ -525,7 +528,7 @@ img,video{-webkit-touch-callout:none;-webkit-user-drag:none;user-select:none}
   <symbol id="i-male" viewBox="0 0 24 24"><circle cx="10" cy="14" r="5" fill="#19C3D0" fill-opacity=".35" stroke="none"/><circle cx="10" cy="14" r="5"/><path d="m13.5 10.5 6-6M15 4.5h4.5V9"/></symbol>
 </svg>
 
-<nav class="nav" id="nav" aria-label="Разделы">
+<nav class="nav" id="nav" aria-label="Разделы" hidden>
   <div class="in"><div class="chips" id="chips"><a href="#quiz"><span>Тест</span></a><a href="#why"><span>Почему</span></a><a href="#map"><span>Анализы</span></a><a href="#today"><span>Липиды</span></a><a href="#invite"><span>Чек⁠-⁠ап</span></a></div><span class="lbl" id="pTxt" aria-label="Раздел 1 из 5 · осталось ~7 мин">1 из 5 · ~7 мин</span></div>
   <div class="rbar" aria-hidden="true"><i id="pbar"></i></div>
 </nav>
