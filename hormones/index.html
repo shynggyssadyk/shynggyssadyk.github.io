@@ -435,6 +435,9 @@ footer{padding:26px 0 30px;font-size:13px;line-height:1.5;color:var(--ink2)}
 .hph::before{opacity:.3}
 @media (max-height:700px){.hph{height:220px}}
 img,video{-webkit-touch-callout:none;-webkit-user-drag:none;user-select:none}
+
+/* top section nav removed 28.11.2026 at the owner's request */
+.nav{display:none!important}section{scroll-margin-top:12px}
 </style>
 </head>
 <body>
@@ -464,7 +467,7 @@ img,video{-webkit-touch-callout:none;-webkit-user-drag:none;user-select:none}
   <symbol id="i-thy" viewBox="0 0 24 24"><path d="M 11.5 9 c-1.5-4-7.5-5-7.5 1 0 4.5 2 8 4.5 8 2 0 3-2 3-4.5 z M 12.5 9 c 1.5-4 7.5-5 7.5 1 0 4.5-2 8-4.5 8-2 0-3-2-3-4.5 z" fill="#19C3D0" fill-opacity=".35"/><path d="M 10 13 c 1 0.75 3 0.75 4 0"/></symbol>
 </svg>
 
-<nav class="nav" id="nav" aria-label="Разделы">
+<nav class="nav" id="nav" aria-label="Разделы" hidden>
   <div class="in"><div class="chips" id="chips"><a href="#quiz"><span>Тест</span></a><a href="#why"><span>Почему</span></a><a href="#map"><span>Анализы</span></a><a href="#today"><span>План</span></a><a href="#invite"><span>Чек⁠-⁠ап</span></a></div><span class="lbl" id="pTxt" aria-label="Раздел 1 из 5 · осталось ~6 мин">1 из 5 · ~6 мин</span></div>
   <div class="rbar" aria-hidden="true"><i id="pbar"></i></div>
 </nav>
