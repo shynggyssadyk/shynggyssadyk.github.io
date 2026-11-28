@@ -412,6 +412,9 @@ footer{padding:26px 0 30px;font-size:13px;line-height:1.5;color:var(--ink2)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 @media (max-width:380px){.nav .chips a{padding:0 6px!important;font-size:13.5px}.nav .lbl{font-size:12.5px}}
 img,video{-webkit-touch-callout:none;-webkit-user-drag:none;user-select:none}
+
+/* top section nav removed 28.11.2026 at the owner's request */
+.nav{display:none!important}section{scroll-margin-top:12px}
 </style>
 </head>
 <body>
@@ -443,7 +446,7 @@ img,video{-webkit-touch-callout:none;-webkit-user-drag:none;user-select:none}
   <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4" fill="#19C3D0" fill-opacity=".35" stroke="none"/><circle cx="9" cy="7" r="4"/><path d="M2 21v-1.5A4.5 4.5 0 0 1 6.5 15h5a4.5 4.5 0 0 1 4.5 4.5V21M16 3.1a4 4 0 0 1 0 7.8M22 21v-1.5a4.5 4.5 0 0 0-3.5-4.4"/></symbol>
 </svg>
 
-<nav class="nav" id="nav" aria-label="Разделы">
+<nav class="nav" id="nav" aria-label="Разделы" hidden>
   <div class="in"><div class="chips" id="chips"><a href="#quiz"><span>Тест</span></a><a href="#why"><span>Почему</span></a><a href="#map"><span>Анализы</span></a><a href="#today"><span>План</span></a><a href="#invite"><span>Чек⁠-⁠ап</span></a></div><span class="lbl" id="pTxt" aria-label="Раздел 1 из 5 · осталось ~6 мин">1 из 5 · ~6 мин</span></div>
   <div class="rbar" aria-hidden="true"><i id="pbar"></i></div>
 </nav>
